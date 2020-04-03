@@ -1,5 +1,5 @@
   <?php
-  require'init.php';
+  require 'init.php';
   $email = isset($_POST['email']) ? $_POST['email']: '';
   $senha = isset($_POST['senha']) ? $_POST['senha']:'';
 
