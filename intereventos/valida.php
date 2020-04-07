@@ -15,8 +15,8 @@
   $PDO = db_connect();
   $sql = "SELECT codigo, nome FROM usuario WHERE email = '$email' and senha = '$senha' ";
   $stmt = $PDO->prepare($sql);
-  $stmt -> bindParam('email', $email);
-  $stmt -> bindParam('senha', $senha);
+  $stmt->bindParam('email', $email);
+  $stmt->bindParam('senha', $senha);
 
   $stmt->execute();
 

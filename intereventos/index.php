@@ -3,6 +3,8 @@ session_start();
 //include_once("verifica.php");
 include_once("conexao.php");
 require 'init.php';
+
+
 ?>
 <!DOCTYPE html>
 <html>

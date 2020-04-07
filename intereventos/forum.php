@@ -6,9 +6,11 @@ require_once 'check.php';
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
-	<link rel="stylesheet" href="node_modules/bootstrap/bootstrap.css">
-  	<link rel="stylesheet" href="css/css/style.css">
-  	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/css/style.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css\css\forum.css">
+        
         <title>Forum & Comunidade</title>
     </head>
     <body>
@@ -126,32 +128,65 @@ require_once 'check.php';
 
   </div>
 
-  <div class="container"  align="center">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-12 text-center mt-3">
+        <h1 class="display-3 text-light"><i class="fa fa-comments text-light" ></i> Forum de Avisos</h1>
+        <p class="lead text-light">Bem Vindo à Comunidade</p>
+        <p class="lead text-light text-capitalize"> <?php echo $_SESSION['username']; ?> | <a class="text-secondary" href="logout.php">Sair</a></p>
+    </div>
 
-      <div class="row ">
-    <div class="col-12 text-center mt-3">
 
 
-      <h1 class="display-3 text-light"><i class="fa fa-comments text-light" ></i> Forum de Avisos</h1>
-      <p class="lead text-light">Bem Vindo à Comunidade</p>
-      <p> <?php echo $_SESSION['username']; ?> | <a href="logout.php">Sair</a></p>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="1"onclick="box_mensagem(this)">
+    <div class="card mb-3 card-avisos">
+      <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="nome card-title">Festa do Sertanejo</h5>
+        <p class="card-text descricao">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
+        <p class="card-text endereco"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
+        <p class="text-muted comentarios">Comentarios: 24</p>
+      </div>
+    </div> 
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="2" onclick="box_mensagem(this)">
+    <div class="card mb-3 card-avisos">
+      <img class="card-group" src="imagem/Daniel2.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="nome card-title">Festa do Montanha russa</h5>
+        <p class="card-text descricao">A festa que vai deixar vocé em coma, venha garantir seu ingresso</p>
+        <p class="card-text endereco"><small class="text-muted">Rua: Avenidá São paio vidal, Numero: 111</small></p>
+        <p class="text-muted comentarios">Comentarios: 11</p>
+      </div>
+    </div> 
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="3" onclick="box_mensagem(this)">
+    <div class="card mb-3 card-avisos">
+      <img class="card-group" src="imagem/daniel1234.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="nome card-title">Festa do Curujas</h5>
+        <p class="card-text descricao">A festa que mais tem adolecentes do planeta!, entre na moda e participe dessa festa de arrasar!</p>
+        <p class="card-text endereco"><small class="text-muted">Rua: Munhos da silva marinho Numero:1221, Chacara dos laranjais</small></p>
+        <p class="text-muted comentarios">Comentarios: 12</p>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header pergunta">
+    <h5 class="nome card-title"> Autor: Maria</h5>
+    <p class="card-text descricao float-left">Quando seria a proxuma festa?</p>
+    <button class="btn-light float-right text-capitalize">Responder</button>
+  </div>
+  <div class="card-body">
+    <div class="card-text resposta">
+      <span class="text-muted"> Cristiano</span>
+      <div class="card-text ">
+        Resposta : na proxima quinta feira
+      </div>
     </div>
   </div>
-
-
-<div class="col-9">
-            
-            
-<div class="card mb-3">
-  <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Festa do Sertanejo</h5>
-    <p class="card-text">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
-    <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
-  </div>
-</div> 
-
-</div>
 </div>
 
 
@@ -164,6 +199,13 @@ require_once 'check.php';
 <script>
   $(function(){
     $('[data-toggle="popover"]').popover();  });
+
+    function box_mensagem(e){
+      console.log($(e).attr('id'));
+      console.log(e);
+       
+      
+    }
   </script>
     </body>
 </html>

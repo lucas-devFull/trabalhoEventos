@@ -1,0 +1,20 @@
+.carousel-item img {
+    margin: auto;
+}
+.card-avisos {
+    max-height: 96%;
+    cursor: pointer;
+}
+
+.comentarios {
+    padding: 5px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.comentarios:hover {
+    background: #0000000f;
+}
+
+.resposta {
+    margin-left: 2%;
+}
