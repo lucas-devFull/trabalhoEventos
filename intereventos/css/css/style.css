@@ -1,8 +1,6 @@
 
 
 /*# sourceMappingURL=style.css.map */
-
-<!-- css login abaixo -->
 *{color: #ffffff;}
 .bg{
 	background: url('../imagem/fundoLogin.jpg') no-repeat;
@@ -17,5 +15,10 @@
 	-moz-box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
 	box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
 }
-
-
+.topMain{
+	position: sticky;
+    top: 0;
+    z-index: 10;
+	background: violet;
+	justify-content: flex-end;
+}

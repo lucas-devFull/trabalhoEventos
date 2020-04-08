@@ -1,76 +1,13 @@
-<?php
-session_start();
-//include_once("verifica.php");
-include_once("conexao.php");
-require 'init.php';
-
-
-?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-  <link rel="stylesheet" href="css/css/style.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Inter Eventos</title>
-</head>
-<body>
- <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark">
-  <div class="container">
-
-    <a class="navbar-brand h1 mb-0" href="#">Inter Eventos</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-      <span class="navbar-toggler-icon"></span>        
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSite">
-
-      <ul class="navbar-nav" mr-auto>
-       <li class="nav-item ">
-        <a class="nav-link text-light" href="index.php">Início</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="login.php">Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Depoimentos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Sobre nós</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="forum.php">Forum</a>
-      </li>  
-
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop" role="button"> Social</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown">
-          <a class="dropdown-item" href="#">Facebook</a>
-          <a class="dropdown-item" href="#">Twitter</a>
-          <a class="dropdown-item" href="#">Instagram</a>
-          <a class="dropdown-item" href="#"></a>
-
-        </div>
-      </li>
-    </ul>
-
-    <form class="form-inline">
-      <input class="form-control ml-2 mr-2" type="search" name="" placeholder="Buscar...">
-      <button class="btn btn-dark" type="submit">Buscar</button>
-    </form>
+<?php include_once("header.php"); ?>
+<div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar topMain">
+  <!-- <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg></a> -->
+  
+  <div>
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.4/getting-started/download/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Baixar</font></font></a>
   </div>
-</div>
-</nav>
+  </div>
 
-<div id="carouselSite" class="carousel slide" data-ride="carousel">
+<!-- <div id="carouselSite" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
     <li data-target="#carouselSite" data-slide-to="1"></li>
@@ -137,9 +74,9 @@ require 'init.php';
 
 
     </div>
-  </div>
-  <div class="row mb-5">
-    <div class="col-3">
+  </div> -->
+  <div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
+    <!-- <div class="col-3">
       <nav id="navbarVertical" class="navbar navbar-light bg-dark">
         <nav class="nav nav-pills flex-column">
           <a  class="nav-link text-light" href="item1">Sorteios e Promoções</a>
@@ -169,7 +106,7 @@ require 'init.php';
 
         </nav>
       </nav>
-    </div>
+    </div> -->
     <div class="col-9">
 
       <div class="card mb-3">
@@ -200,54 +137,6 @@ require 'init.php';
     </div>
   </div>
 
-
-  <div class="row justify-content-sm-center">    
-    <div class="col-sm-6 col-md-4">    
-     <div class="card mb-5">
-
-      <img class="card-img-top" src="imagem/prontotbm.jpg">
-      <div class="card-body">
-        <h4 class="card-title">Os Melhores DJ's</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Green valley</h6>
-        <p class="card-text">aki entra só a mensagem do evento</p>
-        <a href="#" class="card-link">entrar</a>
-        <a href="#" class="card-link">Ler mais</a>
-      </div>
-
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-
-   <div class="card mb-5">
-
-    <img class="card-img-top" src="imagem/dann5.jpg">
-    <div class="card-body">
-      <h4 class="card-title">A Rave de Sucesso</h4>
-      <h6 class="card-subtitle mb-2 text-muted">Golden Night</h6>
-      <p class="card-text">aki entra só a mensagem do evento</p>
-      <a href="#" class="card-link">entrar</a>
-
-      <a href="#" class="card-link">Ler mais</a>
-
-    </div>
-
-  </div>
-
-</div>
-<div class="col-sm-6 col-md-4">
-
- <div class="card mb-5">
-
-  <img class="card-img-top" src="imagem/dann6.jpg">
-  <div class="card-body">
-    <h4 class="card-title">O Melhor do Sertanejo</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Capital 922 ibuí</h6>
-    <p class="card-text">aki entra só a mensagem do evento</p>
-    <a href="#" class="card-link">entrar</a>
-    <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal">Ler mais</a>
-  </div>
-
-</div>
 </div>
 </div>     
 </div>
@@ -471,7 +360,6 @@ require 'init.php';
 </div>
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -495,16 +383,10 @@ require 'init.php';
 
   </div>
 </div>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script>
-  $(function(){
-    $('[data-toggle="popover"]').popover()
-  })
-</script>
+<?php require "footer.php" ?>
+<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+<!-- <script src="node_modules/popper.js/dist/umd/popper.js"></script> -->
+<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+<script src="js/nav.js"></script>
 </body>
 </html>
