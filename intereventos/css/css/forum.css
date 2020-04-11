@@ -18,3 +18,27 @@
 .resposta {
     margin-left: 2%;
 }
+
+.none {
+    display: none;
+}
+#nova_resposta {
+    display: block;
+    width: 100%;
+    border: 2px solid darkslategrey;
+    padding: 5px;
+    color: darkslategray;
+    outline: none;
+}
+
+#box-nova-mensagem {
+    background: #f7f7f7;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.btn-nova-mensagem button {
+    border: none;
+    margin-top: 4px;
+    background: #5a5a5a;
+}
