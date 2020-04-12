@@ -14,9 +14,44 @@
 .comentarios:hover {
     background: #0000000f;
 }
+.efeito_responder {
+    box-shadow: 1px 2px 9px 1px #404040;
+    padding: 8px;
+    font-weight: 600;
+}
+#btn-postar-resposta {
+    background-color: white;
+    color: #666;
+    border-color: #666;
+}
+
+#btn-postar-resposta:hover {
+    background-color: #666;
+    color: white;
+}
+
+.repondendo_pergunta input{
+    color: #666;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ddd;
+    outline-color: #666;
+}
 
 .resposta {
     margin-left: 2%;
+    padding: 7px;
+    border-radius: 6px;
+}
+.btn-responder, .btn-responder:hover {
+    padding: 5px;
+    margin-left: 11px;
+    border: 1px solid #666;
+    background: darkslategray;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .none {
@@ -35,10 +70,15 @@
     background: #f7f7f7;
     padding: 5px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .btn-nova-mensagem button {
     border: none;
     margin-top: 4px;
     background: #5a5a5a;
+}
+
+.nome {
+    font
 }
