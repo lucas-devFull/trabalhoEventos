@@ -1,142 +1,92 @@
 <?php include_once("header.php"); ?>
-
-
-<!-- <div id="carouselSite" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselSite" data-slide-to="1"></li>
-    <li data-target="#carouselSite" data-slide-to="2"></li>
-    <li data-target="#carouselSite" data-slide-to="3"></li>
-  </ol>  
-  <div class="carousel-inner">  
-    <div class="carousel-item active">    
-      <img src="imagem/slidePronto.jpg" class="img-fluid d-block">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Baladas Inesquecíveis</h3>
-        <p>Torne seus dias de tédios e frustrações em dias de diversõa</p>
+<div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
+  <div class="col-9">
+    <div class="w-100">
+      <div class="row">
+        <div class="col-md-6">
+        <div class="data_evento"> 
+          <div> Teste </div>
+          <div> 13 </div>
+        </div>
+          <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body card_texto  col-md-6">
+          <h5 class="card-title" style="color:white;">Festa do Sertanejo</h5>
+          <p class="card-text"style="color:white;" >Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
+          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
+        </div>
       </div>
     </div>
 
-    <div class="carousel-item ">    
-      <img src="imagem/slidePronto.jpg" class="img-fluid d-block">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Aproveitando o melhor do baile</h3>
-        <p>Segue a musíca e deixa-se levar pelo som</p>
-      </div>
-    </div>
-
-
-    <div class="carousel-item ">    
-      <img src="imagem/slidePronto.jpg" class="img-fluid d-block">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Chega da vida normal</h3>
-        <p>Ser normal você será só mais um e o melhor é ser diferente</p>
-      </div>
-    </div>
-
-    <div class="carousel-item ">    
-      <img src="imagem/daniel1234.jpg" class="img-fluid d-block">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Rave que te faz flutuar</h3>
-        <p>Chega de calar a musíca com ignorância</p>
+    <div class="social-buttons">
+      <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
+        <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html From Lavender"><i class="fa fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 
-  <a href="#carouselSite" class="carousel-control-prev" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a href="#carouselSite" class="carousel-control-next" role="button" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
-</div>
-
-<div class="container">
-  <div class="row ">
-    <div class="col-12 text-center mt-3">
-      <h1 class="display-3 text-light"><i class="fa fa-comments text-light" ></i> Seja Bem Vindo(a)</h1>
-      <p class="lead text-light">
-
-       
-      <?php if (isset($_SESSION['username'])): ?>  
-        <p>Olá, <?php echo $_SESSION['username']; ?>. <a href="forum.php">Forum</a> | <a href="logout.php"> Sair</a></p>
-        <?php else: ?> 
-         <p class="text-light">Olá Visitante. <a href="login.php">Clique aqui para fazer o login</a></p>
-        <?php endif; ?> 
-
-
+  <div class="col-9">
+    <div class="w-100">
+      <div class="row">
+        <div class="col-md-6">
+        <div class="data_evento"> 
+          <div> Teste </div>
+          <div> 13 </div>
+        </div>
+          <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body card_texto  col-md-6">
+          <h5 class="card-title" style="color:white;">Festa do Sertanejo</h5>
+          <p class="card-text"style="color:white;" >Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
+          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
+        </div>
+      </div>
     </div>
-  </div> -->
-  <div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
-    <!-- <div class="col-3">
-      <nav id="navbarVertical" class="navbar navbar-light bg-dark">
-        <nav class="nav nav-pills flex-column">
-          <a  class="nav-link text-light" href="item1">Sorteios e Promoções</a>
-          <nav class="nav nav-pills flex-column">
-            <a  class="nav-link ml-3 text-light" href="item1">Baladas Em Destaque</a>
-            <a  class="nav-link ml-3 text-light" href="item1">Baladas Open Bar</a>
-          </nav>
 
-          <a  class="nav-link my-3 text-light" href="item2">Festa Em Destaque</a>
-          <a  class="nav-link my-3 text-light" href="item2">Festa de última Hora</a>
-          <a  class="nav-link my-3 text-light" href="item2">Festa dos 10zão</a>
-          <a  class="nav-link my-3 text-light" href="item2">Festa dos cachaça</a>
-          <a  class="nav-link my-3 text-light" href="item2">As Zueira da balada</a>
-          <a  class="nav-link my-3 text-light" href="item2">Fotos secretas</a>
-          <a  class="nav-link my-3 text-light" href="item2">Novas festas</a>
-          <a  class="nav-link my-3 text-light" href="item2">Festa dos solteiros</a>
-          <a  class="nav-link my-3 text-light" href="item2">Seleção de Bebidas</a>
-          <a  class="nav-link my-3 text-light" href="item2">Pesquisa para Promoções</a>
-          <a  class="nav-link my-3 text-light" href="item2">Sorteio de Pulseiras</a>
-          <a  class="nav-link my-3 text-light" href="item2">Cupom de Descontos</a>
-
-          <a  class="nav-link text-light" href="item3">Entrar Forum</a>
-          <nav class="nav nav-pills flex-column">
-            <a  class="nav-link ml-3 text-light" href="item3">Sorteios Relâmpagos</a>
-            <a  class="nav-link ml-3 text-light" href="item1">Cupons Promocionais</a>
-          </nav>
-
-        </nav>
-      </nav>
-    </div> -->
-    <div class="col-9">
-
-      <div class="card mb-3">
-        <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Festa do Sertanejo</h5>
-          <p class="card-text">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
-          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
-        </div>
-      </div>   
-      <div class="card mb-3">
-        <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Festa do Sertanejo</h5>
-          <p class="card-text">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
-          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
-        </div>
-      </div> 
-      <div class="card mb-3">
-        <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Festa do Sertanejo</h5>
-          <p class="card-text">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
-          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
-        </div>
-      </div> 
-
+    <div class="social-buttons">
+      <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
+        <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html From Lavender"><i class="fa fa-whatsapp"></i></a>
+      </div>
     </div>
   </div>
 
-</div>
-</div>     
-</div>
+  <div class="col-9">
+    <div class="w-100">
+      <div class="row">
+        <div class="col-md-6">
+        <div class="data_evento"> 
+          <div> Teste </div>
+          <div> 13 </div>
+        </div>
+          <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body card_texto  col-md-6">
+          <h5 class="card-title" style="color:white;">Festa do Sertanejo</h5>
+          <p class="card-text"style="color:white;" >Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
+          <p class="card-text"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
+        </div>
+      </div>
+    </div>
 
-<!-- Aki no caso eu faria a divisao do corpo fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -->
-
+    <div class="social-buttons">
+      <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
+        <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html From Lavender"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -221,162 +171,6 @@
 </div>
 </div>
 
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-12 text-center text-light">
-
-      <h1 class="display-4"><i class="fa fa-align-justify text-light"></i> Pesquisa da Balada</h1>
-
-    </div>
-
-  </div>
-  <div class="row justify-content-center mb-5">
-
-    <div class="col-sm-12 col-md-10 col-lg-8">
-      <form>
-        <div class="form-row justify-content-center">
-          <div class="form-group col-sm-8">
-            <div class="form-check">
-
-              <label for="inputBebida" class="form-check-label text-light">
-                <input type="radio" name="fOlario" class="form-check-input" 
-                id="inputBebida" checked> Vamos de mais 'Open Bar'
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row justify-content-center">
-          <div class="form-group col-sm-8">
-            <div class="form-check">
-
-              <label for="inputMulher" class="form-check-label text-light">
-                <input type="radio" name="fOlario" class="form-check-input" 
-                id="inputMulher">Uma baladinha 'Anos 80'
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row justify-content-center">
-          <div class="form-group col-sm-8">
-            <div class="form-check">
-
-              <label for="inputMulher" class="form-check-label text-light">
-                <input type="radio" name="fOlario" class="form-check-input" 
-                id="inputMulher">Quem quer mais 'Sertanejo Universitário'
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row justify-content-center">
-          <div class="form-group col-sm-8">
-            <div class="form-check">
-
-              <label for="inputMulher" class="form-check-label text-light">
-                <input type="radio" name="fOlario" class="form-check-input" 
-                id="inputMulher">Por mais modão 'Sertanejo'
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row justify-content-center">
-          <div class="form-group col-sm-8">
-            <div class="form-check">
-
-              <label class="form-check-label text-light" for="musicaFunk">
-                <input type="radio" class="form-check-input " id="musicaFunk" name="fOlario">
-                Por mais tempo com 'Funk'
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-row justify-content-center">
-          <div class=" col-sm-8">
-            <button type="submit" class="btn btn-primary">Votar</button>
-            <a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" data-placement="right" data-trigger="focus" title="Ajuda..." data-content="Uma forma voltada para ajudar as organizações de eventos que busca saber qual gosto possui os baladeiros do brasil">
-             <i class="fa fa-question-circle"></i>
-           </a>        
-         </div>
-       </div>     
-     </form>
-   </div>
-
- </div>
-
- <div class="row mb-3 text-light">
-
-  <div class="col-12" ><hr></div>  
-
-  <div class="col-sm-4  text-light">
-    <h3 style="text-align: center">Eventos</h3>
-    <p>Um site desenvolvido para auxiliar usuários que frequentam baladas por esse Brasil a fora com o intuito de economizar tempo por procurar baladas ou afazeres nos finais de semana e feriado</p>
-    <p>Vamos lá e desfrutem do site!</p>
-  </div>
-
-  <div class="col-sm-4 text-center text-light">
-
-    <h3>Menu</h3>
-
-    <div class="list-group text-center">
-      <a href="#" class="btn btn-outline-light" list-group-item-action >Perfil</a>
-      <a href="#" class="btn btn-outline-light" list-group-item-action >Serviços</a>
-      <a href="#" class="btn btn-outline-light" list-group-item-action >Depoimentos</a>
-      <a href="#" class="btn btn-outline-light" list-group-item-action >Contatos</a>
-
-    </div>
-
-  </div>
-
-  <div class="col-sm-4 text-center text-primary">
-
-    <h3>Social</h3>
-    <div class="btn-group-vertical btn-block btn-group-lg" role="group">
-      <a href="#" class="btn btn-outline-primary"><i class="fa fa-facebook-square"></i> Facebook</a>
-      <a href="#" class="btn btn-outline-info"><i class="fa fa-twitter-square"></i> Twitter</a>
-      <a href="#" class="btn btn-outline-warning"><i class="fa fa-instagram"></i> Instagram</a>
-
-    </div>
-
-  </div>
-
-  <div class="col-12 mt-5">
-    <blockquote class="blockquote text-center">
-      <p class="mb-0 text-light"> A vida é uma festa. Ou você se diverte, ou você dança. </p>
-      <footer class="blockquote-footer text-light">Autor Desconhecido</footer>
-    </blockquote>
-
-  </div>
-</div>
-</div>
-
-<div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Labama</h5>
-        <button type="button" class="close" data-dismiss="modal">
-          <span>&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <p>texto ou imagem</p>
-
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-
-  </div>
-</div>
 <?php require "footer.php" ?>
 <!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
 <!-- <script src="node_modules/popper.js/dist/umd/popper.js"></script> -->

@@ -9,7 +9,7 @@ session_start();
   <meta charset="utf-8">  <!-- Bootstrap CSS -->
   <link rel="shortcut icon" href="imagem/favicon.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/css/nav.css">
   <link rel="stylesheet" href="css/css/style.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
