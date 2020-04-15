@@ -17,10 +17,10 @@ function insert($PDO,$insert) {
     return (int)$PDO->lastInsertId();
 }
 
-function get($PDO, $id_postagem) {
+function get($PDO, $id_postagem=0) {
     $sql = "SELECT * FROM mensagens where id_postagem = $id_postagem ORDER BY data_postagem ASC";
     $stmt = $PDO->prepare($sql);
-    $stmt->bindParam('id_postagem', $id_postagem, PDO::PARAM_INT);
+    // $stmt->bindParam('id_postagem', $id_postagem, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetchAll();
 }

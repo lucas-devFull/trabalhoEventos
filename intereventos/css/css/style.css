@@ -52,9 +52,9 @@ html{
 }
 
 .data_evento{
-	color: white;
+    color: white;
     position: absolute;
-	padding: 3% !important;
+    padding: 2% 2% 4% 2%!important;
     background: black;
     left: 10%;
     border-radius: 6%;

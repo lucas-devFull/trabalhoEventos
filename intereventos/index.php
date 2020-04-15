@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-6">
         <div class="data_evento"> 
-          <div> Teste </div>
+          <div class="mt-2"> Teste </div>
           <div> 13 </div>
         </div>
           <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
@@ -20,7 +20,7 @@
 
     <div class="social-buttons">
       <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
-        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
         <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
         <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -34,7 +34,7 @@
       <div class="row">
         <div class="col-md-6">
         <div class="data_evento"> 
-          <div> Teste </div>
+          <div class="mt-2"> Teste </div>
           <div> 13 </div>
         </div>
           <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
@@ -49,7 +49,7 @@
 
     <div class="social-buttons">
       <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
-        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
         <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
         <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -63,7 +63,7 @@
       <div class="row">
         <div class="col-md-6">
         <div class="data_evento"> 
-          <div> Teste </div>
+          <div class="mt-2"> Teste </div>
           <div> 13 </div>
         </div>
           <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
@@ -78,7 +78,7 @@
 
     <div class="social-buttons">
       <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
-        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="hi-icon" href="https://www.facebook.com/sharer.php?u=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/share?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-twitter"></i></a>
         <a class="hi-icon" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html&amp;media=https://1.bp.blogspot.com/-_zTd-tq-1eo/Xil8BNWbYTI/AAAAAAAAgPM/9QgqtuWb0tgmeWotLOyu9fyBNwkBai11ACLcBGAsYHQ/s72-c/post-image5.jpg&amp;description=Incredible Graffiti Art Spotted in East Village"><i class="fa fa-pinterest"></i></a>
         <a class="hi-icon" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lavender-oddthemes.blogspot.com/2017/09/posing-near-wardrobe.html" target="_blank"><i class="fa fa-linkedin"></i></a>
