@@ -32,6 +32,19 @@ html{
     margin-top: 7%;
     position: relative;
     margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.hi-icon-wrap{
+    width: 145px;
+    z-index: 10;
+    background: #212529;
+}
+
+.hi-icon{
+    padding: 2%;
+    font-size: 110%;
 }
 
 .social-buttons:after {
@@ -69,4 +82,19 @@ html{
 
 #menu-item{
 	background-color: #57657e45;
+}
+
+.imagem-footer{
+    max-width: 100%;
+    width: 88px;
+    height: 70px;
+    border-radius: 35%;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+.div-imagens-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

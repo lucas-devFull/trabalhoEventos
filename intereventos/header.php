@@ -28,5 +28,5 @@ session_start();
     <hr class="bg-light" style="width:75%;">
     <?php require 'nav.php'?>
 
-    <button id="get"> get </button>
+    <!-- <button id="get"> get </button> -->
   </div>

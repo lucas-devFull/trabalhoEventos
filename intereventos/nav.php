@@ -1,42 +1,3 @@
-<!-- 
-
-  nav selecionada https://codepen.io/azouaoui-med/pen/wpBadb
---->
-  
- <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark">
-  <div class="container">
-
-    <a class="navbar-brand h1 mb-0" href="#">Inter Eventos</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-      <span class="navbar-toggler-icon"></span>        
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSite">
-
-      <ul class="navbar-nav" mr-auto>
-       <li class="nav-item ">
-        <a class="nav-link text-light" href="index.php">Início</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="login.php">Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Depoimentos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#">Sobre nós</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="forum.php">Forum</a>
-      </li> 
-  </div>
-</div>
-</nav> -->
-
 <nav class="navbar navbar-expand-lg text-center">
   <button id="menu-item" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span > <i class="fas fa-bars"></i> <span>
@@ -60,17 +21,12 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Serviços</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="forum.php">Fórum</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre Nós / Depoimentos </a>
+          <a class="nav-link" href="#">Serviços / Depoimentos </a>
         </li>
-
       </ul>
     </div>
   </div>
 </nav>
-  
