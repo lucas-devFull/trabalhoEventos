@@ -7,6 +7,9 @@
     <div style="width:100%;">
       <ul class="navbar-nav" style='justify-content:space-around;'>
         <li class="nav-item active">
+          <div class="nav-link" id="newPost">Adicionar Novo post <span class="sr-only">(current)</span></div>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="index.php">Dashboard <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
@@ -14,7 +17,7 @@
             Baladas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
+            <div class="dropdown-item" id="new_balada">Adicionar Nova Balada</div>
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
@@ -25,6 +28,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Serviços / Depoimentos </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="login.php"> Login <span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
