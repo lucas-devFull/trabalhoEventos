@@ -6,9 +6,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div style="width:100%;">
       <ul class="navbar-nav" style='justify-content:space-around;'>
-        <li class="nav-item active">
-          <div class="nav-link" id="newPost">Adicionar Novo post <span class="sr-only">(current)</span></div>
-        </li>
+        <!-- <li class="nav-item active"> -->
+          <!-- <div class="nav-link" id="newPost">Adicionar Novo post <span class="sr-only">(current)</span></div> -->
+        <!-- </li> -->
         <li class="nav-item active">
           <a class="nav-link" href="index.php">Dashboard <span class="sr-only">(current)</span></a>
         </li>

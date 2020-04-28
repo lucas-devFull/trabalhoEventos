@@ -10,7 +10,27 @@ $(document).ready(function() {
         $('#modal-balada').iziModal('open');
     })
 
-    new_balada
+    $(".arquivos_evento").change(function(){
+		ImagePreview(this, $(this).attr("data-anexo"));
+	});
+
+    function ImagePreview(input, tipo){        
+        if (input.files && input.files[0]){
+            var r = new FileReader();
+            r.onload = function(e){
+                if (tipo == "video") {
+                    $("#previewMp4").attr("controls", "true")
+                    $("#previewMp4").show();
+                    $("#previewMp4").attr("src", e.target.result);
+                }else{
+                    $("#previewImg").show();
+                    $("#previewImg").attr("src", e.target.result);
+                }
+            }
+            r.readAsDataURL(input.files[0]);
+        }
+    }
+
     $("#get").on('click',function() {
         $.ajax({
             method: "GET",

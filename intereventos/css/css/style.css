@@ -141,3 +141,54 @@ html{
     flex-direction: column;
     align-items: center;
 }
+
+.newPost{
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    left: 10px;
+}
+
+.icon-close{
+    background: #141619;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagens_upload{
+    display: none;
+}
+
+.imagem_file{
+    background: url("imagem/arte.png");
+}
+
+.textArea-modal{
+    border: none;
+}
+
+.textArea-modal:focus{
+    box-shadow: none;
+}
+
+.arquivos_evento{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 7%;
+    padding: 1%;
+}
+
+.file_eventos{
+    top: 8em;
+    position: absolute;
+    z-index: 1;
+    padding: 2%;
+    font-size: 105%;
+}
+
+.anexo_modal{
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}

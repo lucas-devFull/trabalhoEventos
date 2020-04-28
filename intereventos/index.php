@@ -1,5 +1,6 @@
 <?php include_once("header.php"); ?>
 <div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
+<div id="newPost"> <i class="newPost far fa-plus-square"></i> </div>
   <div class="col-9">
     <div class="w-100">
       <div class="row">
@@ -103,34 +104,51 @@
     </div>
   </div>
 </div>
-
-<div id="modal-post" aria-hidden="true" aria-labelledby="modal-post" role="dialog" class="iziModal" data-izimodal-group="grupo1" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;"><div class="iziModal-wrap" style="height: auto;"><div class="iziModal-content" style="padding: 0px;">
-        <button data-izimodal-close="" class="icon-close" style=""></button>
-        <header>
-            <a href="" id="signin" class="">Sign in</a>
-            <a href="" class="active">New Account</a>
-        </header>
-        <div class="sections" style="height: 373px;">
-                <section class="hide" style="display: none;">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <footer>
-                        <button data-izimodal-close="">Cancel</button>
-                        <button class="submit">Log in</button>            
-                    </footer>
-                </section>
-                <section style="display: block;">
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <label for="check"><input type="checkbox" name="checkbox" id="check" value="1"> I agree to the <u>Terms</u>.</label>
-                    <footer>
-                        <button data-izimodal-close="" data-izimodal-transitionout="bounceOutDown">Cancel</button>
-                        <button class="submit">Create Account</button>
-                    </footer>
-                </section>
+<div id="modal-post" aria-hidden="true" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;">
+  <div class="iziModal-wrap" style="height: auto;">
+    <div class="iziModal-content" style="padding: 0px;">
+      <div class="icon-close">
+        <a href="javascript:void(0)" class="iziModal-button iziModal-button-close" data-izimodal-close=""></a>
+      </div>
+     
+    <div style="padding:5%"> 
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="titulo_evento" aria-describedby="Titulo" placeholder="Titulo">
         </div>
-    </div></div></div>
+        <div class="form-group">
+          <div style="display: flex;justify-content: center;">
+            <span class="file_eventos" style="right: 5em;"><i class="fas fa-camera"></i></span>
+            <input type="file" class="arquivos_evento" data-anexo="imagem" style="right: 5em;" multiple="true">
+            <span class="file_eventos" style="right: 2em;"><i class="fas fa-video"></i></span>
+            <input type="file" class="arquivos_evento" data-anexo="video" style="right: 2em;" multiple="true">
+          </div>
+          <div class="card" id="informacao_evento" stylarquivos_eventoe="width: 100%;">
+            <div class="anexo_modal">
+              <img id="previewImg" width=20% height="20%">
+              <video id="previewMp4" autoplay></video>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                <textarea type="text" class="form-control textArea-modal"  rols='6' placeholder="Texto principal"></textarea>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="endereco_evento" aria-describedby="endereço" placeholder="Endereço">
+        </div>
+        <div class="form-group">
+          <input type="date" class="form-control" id="data_evento">
+        </div>
+        <div style="text-align:end;">
+          <button type="submit" class="btn btn-primary">Postar</button>
+        </div>
+      </form>
+     </div>
+    </div>
+  </div>
+</div>
 
     <div id="modal-balada" aria-hidden="true" aria-labelledby="modal-balada" role="dialog" class="iziModal" data-izimodal-group="grupo1" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;"><div class="iziModal-wrap" style="height: auto;"><div class="iziModal-content" style="padding: 0px;">
         <button data-izimodal-close="" class="icon-close" style=""></button>
