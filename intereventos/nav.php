@@ -18,9 +18,12 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <div class="dropdown-item" id="new_balada">Adicionar Nova Balada</div>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <select class="dropdown-item form-control" href="#">
+              <option value="">teste</option>
+            </select>
+            <select class="dropdown-item" href="#">
+              <option value="">teste</option>
+            </select>
           </div>
         </li>
         <li class="nav-item">

@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $("#modal-post").iziModal();
     $("#modal-balada").iziModal();
-
+    $("#tipo_balada").select2();
+    
     $("#newPost").on('click', function() {
         $('#modal-post').iziModal('open');
     })
@@ -11,6 +12,7 @@ $(document).ready(function() {
     })
 
     $(".arquivos_evento").change(function(){
+        $(".anexo_modal").html();
 		ImagePreview(this, $(this).attr("data-anexo"));
 	});
 
@@ -19,10 +21,13 @@ $(document).ready(function() {
             var r = new FileReader();
             r.onload = function(e){
                 if (tipo == "video") {
-                    $("#previewMp4").attr("controls", "true")
+                    $(".arquivos_evento[data-anexo='imagem']").val("")
+                    $(".anexo_modal").html('<video id="previewMp4" class="anexos" controls autoplay></video>')
                     $("#previewMp4").show();
                     $("#previewMp4").attr("src", e.target.result);
                 }else{
+                    $(".arquivos_evento[data-anexo='video']").val("")
+                    $(".anexo_modal").html('<img id="previewImg" class="anexos">')
                     $("#previewImg").show();
                     $("#previewImg").attr("src", e.target.result);
                 }
