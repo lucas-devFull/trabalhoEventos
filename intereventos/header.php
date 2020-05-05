@@ -15,6 +15,9 @@ session_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css" integrity="sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/css/nav.css">
   <link rel="stylesheet" href="css/css/style.css">
+  <link href='smartmenus-1.1.0/css/sm-core-css.css' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="smartmenus-1.1.0/css/sm-clean/sm-clean.css">
+  <link rel="stylesheet" href="css/css/nav2.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Inter Eventos</title>
 </head>

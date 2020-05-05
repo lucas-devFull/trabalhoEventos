@@ -179,6 +179,7 @@
 </div>
 
 <?php require "footer.php" ?>
+<script src="smartmenus-1.1.0/jquery.smartmenus.min.js"></script>
 <script src="js/index.js"></script>
 <script src="js/nav.js"></script>
 </body>

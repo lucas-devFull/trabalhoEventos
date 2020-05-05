@@ -139,7 +139,8 @@ html{
     color: white;
     font-size: 3em;
     position: absolute;
-    left: 10px;
+    left: 1em;
+    cursor: pointer;
 }
 
 .icon-close{
