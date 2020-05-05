@@ -1,16 +1,32 @@
-@charset"utf-8";
-<!-- css login abaixo -->
-*{color: #ffffff;}
 .bg{
 	background: url("../../imagem/fundoLogin.jpg") no-repeat;
 	width: 100%;
 	height: 100vh;
 }
+
 .form-container{
-	border: 0px solid #ffffff;
-	padding: 50px 60px;
-	margin-top: 15vh; 
-	-webkit-box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
-	-moz-box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
-	box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
+	background-color: #000000bf;
+    padding: 6em 4em;
+    border: solid 0px white;
+    height: 80%;
+    -webkit-box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 13px 13px 23px 0px rgba(0,0,0,0.51);
+	box-shadow: 1px 1px 8px 3px rgba(0,0,0,0.51);
+}
+
+.titulo_login{
+	font-size: xx-large;
+    color: white;
+    text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	margin-bottom: 5%;
+}
+
+.icon_home{
+	position: relative;
+    top: -15em;
+    right: 2em;
+    font-size: x-large;
+	padding: 1em;
+	margin-bottom: 10%;
 }

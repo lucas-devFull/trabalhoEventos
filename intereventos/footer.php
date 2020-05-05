@@ -38,7 +38,7 @@
       </div>
   </div>
 </div>
-<footer style="width: 100%;background: #f8f9fa;">&copy; Copyright 2020 Lucas Conceição e Guilherme Silva</footer>
+<footer style="width: 100%;background: #f8f9fa;">&copy; Copyright 2020 Inter Eventos Ltda</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>
