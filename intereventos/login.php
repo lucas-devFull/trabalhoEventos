@@ -20,7 +20,7 @@ session_start();
 	  <title>Inter Eventos</title>
 	</head>
 
-	<body style="background: #212529; height:100%; background-image: url(imagem/fundo_login.jpg);background-size: contain;">
+	<body class="imgFundoLogin" style="background: #212529; height:100%; background-image: url(imagem/fundo_login.jpg);">
 		<div class="container h-100">
 			<div class="row h-100" style="justify-content: flex-end;align-items: center;margin-left: 15em;">
 				<div class="col-md-8" style="display: flex;height: 100%;justify-content: center; align-items: center;">
@@ -39,11 +39,44 @@ session_start();
 							<a href="index.php"> <i class="fas fa-home"></i> </a>
 						</div>
 						<div class="text-right mt-2">
-							<a href="cadastro.php" class=" text-light">Cadastre - se</a><br/>
+							<div id="cadastroUsuario" style="cursor:pointer;" class="text-light">Cadastre - se</div><br/>
 						</div>
 					</form>
 				</div>
 			</div>
-		</div>			
+		</div>
+		<div id="modal-cadastroUsuario" aria-hidden="true" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;">
+		  <div class="iziModal-wrap" style="height: auto;">
+		    <div class="iziModal-content" style="padding: 0px;">
+		      <div class="icon-close">
+		        <a href="javascript:void(0)" class="iziModal-button iziModal-button-close" data-izimodal-close=""></a>
+		      </div>
+
+		    <div style="padding:5%"> 
+		      <form>
+		        <div class="form-group">
+		          <input type="text" class="form-control" id="nome_usuario" aria-describedby="Titulo" placeholder="Nome">
+		        </div>
+		        <div class="form-group">
+		          <input type="text" class="form-control" id="email_usuario" aria-describedby="endereço" placeholder="Email">
+				</div>
+				<div class="form-group">
+		          <input type="password" class="form-control" id="senha_usuario" aria-describedby="senha" placeholder="Senha">
+		        </div>
+		        <div style="text-align:end;">
+		          <button id="cadUsuario" class="btn btn-primary"> Cadastrar </button>
+		        </div>
+		      </form>
+		     </div>
+		    </div>
+		  </div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" integrity="sha256-jx5SpNrWp5tIlHK2uGtUsZ4QRJkEV9aQXXGN3kkPXIE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js" integrity="sha256-wfVTTtJ2oeqlexBsfa3MmUoB77wDNRPqT1Q1WA2MMn4=" crossorigin="anonymous"></script>
+		<script src="js/login.js"></script>
 	</body>
 </html>
