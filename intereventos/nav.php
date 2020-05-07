@@ -160,18 +160,5 @@
         </li>
       </ul>
     </li>
-    <li><a href="#">Mega menu</a>
-      <ul class="mega-menu">
-        <li>
-          <!-- The mega drop down contents -->
-          <div style="width:400px;max-width:100%;">
-            <div style="padding:5px 24px;">
-              <p>This is a mega drop down test. Just set the "mega-menu" class to the parent UL element to inform the SmartMenus script. It can contain <strong>any HTML</strong>.</p>
-              <p>Just style the contents as you like (you may need to reset some SmartMenus inherited styles - e.g. for lists, links, etc.)</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </li>
   </ul>
 </nav>

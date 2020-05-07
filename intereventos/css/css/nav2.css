@@ -4,6 +4,9 @@
     /* prevent text rendering degrade during animation in Mac browsers */
     #main-menu {
       -webkit-font-smoothing: subpixel-antialiased;
+      display: flex;
+      justify-content: space-around;
+      margin-left: 5em;
     }
     /* show animation */
     #main-menu ul.show-animation {
