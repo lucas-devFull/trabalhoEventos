@@ -5,8 +5,8 @@
     #main-menu {
       -webkit-font-smoothing: subpixel-antialiased;
       display: flex;
-      justify-content: space-around;
-      margin-left: 5em;
+      justify-content: space-evenly;
+      margin-left: 6em;
     }
     /* show animation */
     #main-menu ul.show-animation {

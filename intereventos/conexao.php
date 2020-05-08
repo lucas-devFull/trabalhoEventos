@@ -5,6 +5,11 @@ function db_connect(){
 	return $PDO; 
 }
 
+function db_connect_mysqli(){
+	$link = mysqli_connect("localhost", "root", "lucas123", "intereventos");
+	return $link;
+}
+
 function dataConvt($date){
 	if(! strstr($date, '/')){
 		//convertendo aqui de yyyy/mm/dd para dd/mm/yyyy

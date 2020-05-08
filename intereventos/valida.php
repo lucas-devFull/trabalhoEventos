@@ -9,7 +9,6 @@
   alert(\"Dados não definidos.\");
   </script>
   "; 
-  header('Location: login.php'); exit;
 
   }
   $PDO = db_connect();
@@ -27,7 +26,6 @@
   alert(\"Erro no Login tente novamente.\");
   </script>
   "; 
-  header('Location: index.php');
   exit;
 }  
   $user = $users[0];

@@ -24,7 +24,7 @@ session_start();
 		<div class="container h-100">
 			<div class="row h-100" style="justify-content: flex-end;align-items: center;margin-left: 15em;">
 				<div class="col-md-8" style="display: flex;height: 100%;justify-content: center; align-items: center;">
-					<form class="form-container" method="POST" action="valida.php">
+					<div class="form-container">
 						<div class="titulo_login"> Login In </div>
 						<div class="form-group">
 							<label for="email" class='text-light'>Email</label>
@@ -34,14 +34,14 @@ session_start();
 							<label for="senha" class='text-light'>Senha</label>
 							<input type="password" name="senha" class="form-control" id="password1" placeholder="Adicionar senha">
 						</div>
-						<button type="submit" class="btn btn-dark btn-block mt-5" style="margin-bottom:-2em;">Entrar</button>
+						<button id="logar" class="btn btn-dark btn-block mt-5" style="margin-bottom:-2em;">Entrar</button>
 						<div class='icon_home'>
 							<a href="index.php"> <i class="fas fa-home"></i> </a>
 						</div>
 						<div class="text-right mt-2">
 							<div id="cadastroUsuario" style="cursor:pointer;" class="text-light">Cadastre - se</div><br/>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

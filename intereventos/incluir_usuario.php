@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-    <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastro</title>
-    </head>
-    <body>
-        <?php
+<?php
         require 'init.php';
         $nome = isset($_POST['nome']) ? $_POST['nome']: '';
         $email = isset($_POST['email']) ? $_POST['email']: '';
@@ -25,25 +18,11 @@
         $stmt->bindParam('senha', $senha);
 
         if($stmt->execute()){
-            echo "
-            
-            <script type=\"text/javascript\">
-            alert(\"Usuario cadastrado com sucesso.\");
-            </script>
-            ";
+            echo true;
             header('Location: index.php');
         }else{
-            echo "
-            <META HTTP-EQUIV=REFRESH CONTENT = '0; URL=
-            http://localhost/intereventos/index.php'>
-            <script type=\"text/javascript\">
-            alert(\"Erro no cadastro tente novamente.\");
-            </script>
-            ";
+            echo false;
         }
 
         mysqli_close($conn);
 ?>
-<!-- <a href="index.php">Quer voltar ao Início 'Clique Aqui'</a> --->
-</body>
-</html>
