@@ -6,7 +6,32 @@ $(function() {
         $('#modal-balada').iziModal('open');
     })
 
+	$("#modal-cadastroUsuario").iziModal();
 
+    $("#configUsuario").on('click', function() {
+		$.ajax({
+            method: "POST",
+            url: "alterUsuario.php",
+            data: {codigo:$("#configUsuario").attr('data-id-usuario'), funcao:"busca"}
+          })
+        .done(function(data) {
+            if (JSON.parse(data).status == true) {
+               $('#nome_usuario').val(JSON.parse(data).dados.nome)
+			   $('#email_usuario').val(JSON.parse(data).dados.email)
+			   $("#modal-cadastroUsuario").iziModal('open');
+            }else{
+                iziToast.warning({
+                    title: 'Atenção',
+                    message: 'Erro ao buscar usuario',
+                    timeout: 2000,
+                    onClosing: function() {
+                        $(".input-default").val('');
+                    }
+                });
+            }
+        });
+	});
+	
   $('#main-menu').smartmenus({
     mainMenuSubOffsetX: -1,
     mainMenuSubOffsetY: 4,

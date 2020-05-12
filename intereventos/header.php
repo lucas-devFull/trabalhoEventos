@@ -2,6 +2,7 @@
 include_once("conexao.php");
 require 'init.php';
 session_start();
+echo($_SESSION['logged_in'] == true ?"logado" : "deslogado");
 ?>
 <!DOCTYPE html>
 <html>

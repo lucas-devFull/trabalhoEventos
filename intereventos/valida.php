@@ -21,7 +21,7 @@
     }else{  
       $user = $users[0];
       session_start();
-      $_SESSION['Logged_in']= true;
+      $_SESSION['logged_in']= true;
       $_SESSION['user_id']=$user['codigo'];
       $_SESSION['username'] = $user['nome'];
       echo json_encode(array("status" => true));
