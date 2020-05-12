@@ -1,4 +1,12 @@
 $(function() {
+
+    $("#modal-balada").iziModal();
+    $("#tipo_balada").select2();
+    $("#new_balada").on('click', function() {
+        $('#modal-balada').iziModal('open');
+    })
+
+
   $('#main-menu').smartmenus({
     mainMenuSubOffsetX: -1,
     mainMenuSubOffsetY: 4,

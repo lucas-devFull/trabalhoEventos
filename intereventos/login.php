@@ -10,6 +10,7 @@ session_start();
 	  <link rel="shortcut icon" href="imagem/favicon.jpg" type="image/x-icon">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" integrity="sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E=" crossorigin="anonymous" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" integrity="sha256-pODNVtK3uOhL8FUNWWvFQK0QoQoV3YA9wGGng6mbZ0E=" crossorigin="anonymous" />
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.css" integrity="sha256-qaS6Cn77YhfgOLFHy4qadvrn/cEYG9bvbnQILtSY+0E=" crossorigin="anonymous" />
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css" integrity="sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s=" crossorigin="anonymous" />
@@ -28,11 +29,11 @@ session_start();
 						<div class="titulo_login"> Login In </div>
 						<div class="form-group">
 							<label for="email" class='text-light'>Email</label>
-							<input type="email" name="email" class="form-control" id="email" placeholder="Informar aqui seu email">
+							<input type="email" name="email" class="form-control input-default" id="email" placeholder="Informar aqui seu email">
 						</div>
 						<div class="form-group">
 							<label for="senha" class='text-light'>Senha</label>
-							<input type="password" name="senha" class="form-control" id="password1" placeholder="Adicionar senha">
+							<input type="password" name="senha" class="form-control input-default" id="password1" placeholder="Adicionar senha">
 						</div>
 						<button id="logar" class="btn btn-dark btn-block mt-5" style="margin-bottom:-2em;">Entrar</button>
 						<div class='icon_home'>
@@ -55,16 +56,16 @@ session_start();
 		    <div style="padding:5%"> 
 		      <form>
 		        <div class="form-group">
-		          <input type="text" class="form-control" id="nome_usuario" aria-describedby="Titulo" placeholder="Nome">
+		          <input type="text" class="form-control" id="nome_usuario" data-bind='cad_usuario' aria-describedby="Titulo" placeholder="Nome">
 		        </div>
 		        <div class="form-group">
-		          <input type="text" class="form-control" id="email_usuario" aria-describedby="endereço" placeholder="Email">
+		          <input type="text" class="form-control" id="email_usuario" data-bind='cad_usuario' aria-describedby="endereço" placeholder="Email">
 				</div>
 				<div class="form-group">
-		          <input type="password" class="form-control" id="senha_usuario" aria-describedby="senha" placeholder="Senha">
+		          <input type="password" class="form-control" id="senha_usuario" data-bind='cad_usuario' aria-describedby="senha" placeholder="Senha">
 		        </div>
 		        <div style="text-align:end;">
-		          <button id="cadUsuario" class="btn btn-primary"> Cadastrar </button>
+		          <div id="cadUsuario" class="btn btn-primary"> Cadastrar </div>
 		        </div>
 		      </form>
 		     </div>
@@ -73,6 +74,7 @@ session_start();
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.js" integrity="sha256-siqh9650JHbYFKyZeTEAhq+3jvkFCG8Iz+MHdr9eKrw=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" integrity="sha256-jx5SpNrWp5tIlHK2uGtUsZ4QRJkEV9aQXXGN3kkPXIE=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>

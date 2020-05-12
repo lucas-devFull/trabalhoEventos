@@ -1,14 +1,7 @@
 $(document).ready(function() {
-    $("#modal-post").iziModal();
-    $("#modal-balada").iziModal();
-    $("#tipo_balada").select2();
-    
+    $("#modal-post").iziModal();    
     $("#newPost").on('click', function() {
         $('#modal-post').iziModal('open');
-    })
-
-    $("#new_balada").on('click', function() {
-        $('#modal-balada').iziModal('open');
     })
 
     $(".arquivos_evento").change(function(){

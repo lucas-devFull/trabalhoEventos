@@ -148,39 +148,7 @@
   </div>
 </div>
 
-<div id="modal-balada" aria-hidden="true" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;">
-  <div class="iziModal-wrap" style="height: auto;">
-    <div class="iziModal-content" style="padding: 0px;">
-      <div class="icon-close">
-        <a href="javascript:void(0)" class="iziModal-button iziModal-button-close" data-izimodal-close=""></a>
-      </div>
-     
-    <div style="padding:5%"> 
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control" id="nome_balada" aria-describedby="Nome da balada" placeholder="Nome da balada">
-        </div>
-        <div class="form-group">
-          <select class="form-control" id="tipo_balada">
-            <option value="0">Nenhuma das Opções </option>
-            <option value="1"> Sertanejo </option>
-            <option value="2"> Eletrônica </option>
-            <option value="3"> MPB </option>
-            <option value="4"> Rock </option>
-          </select>
-        </div>
-        <div style="text-align:end;">
-          <button type="submit" class="btn btn-primary">Nova Balada</button>
-        </div>
-      </form>
-     </div>
-    </div>
-  </div>
-</div>
-
 <?php require "footer.php" ?>
-<script src="smartmenus-1.1.0/jquery.smartmenus.min.js"></script>
 <script src="js/index.js"></script>
-<script src="js/nav.js"></script>
 </body>
 </html>

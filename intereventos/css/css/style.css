@@ -206,6 +206,10 @@ html{
     border: 1px solid #ced4da !important;
 }
 
+.select2-container--open{
+    border: none;
+}
+
 .select2-selection{
     border: none;
 }

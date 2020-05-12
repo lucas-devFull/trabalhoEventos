@@ -1,15 +1,9 @@
 <?php
   
-// constantes com as credenciais de acesso ao banco MySQL
+  require_once 'conexao.php';
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'admin');
+define('DB_PASS', 'lucas123');
 define('DB_NAME', 'intereventos');
-  
-// habilita todas as exibições de erros
 ini_set('display_errors', true);
-error_reporting(E_ALL);
-//date_default_timezone_set('Garca/Sao_Paulo');
-  
-// inclui o arquivo de funçõees
-require_once 'conexao.php';
+error_reporting(0);
