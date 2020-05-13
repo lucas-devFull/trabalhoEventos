@@ -3,7 +3,7 @@
     <li><a href="index.php">Home</a></li>
     <li><a href="#">Baladas</a>
       <ul>
-        <li><a id="new_balada">Adicionar Nova Balada</a></li>
+        <li><a  href="#" id="new_balada">Adicionar Nova Balada</a></li>
         <li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
         <li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
         <li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>

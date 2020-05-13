@@ -32,6 +32,39 @@ $(function() {
         });
 	});
 	
+	$("#cadUsuario").on('click', function() {
+		$.ajax({
+            method: "POST",
+            url: "alterUsuario.php",
+			data: {codigo:$("#configUsuario").attr('data-id-usuario'),
+					nome:$("#nome_usuario").val(),
+					email:$("#email_usuario").val(),
+					senha:$("#senha_usuario").val(),
+					funcao:"altera"}
+          })
+        .done(function(data) {
+            if (JSON.parse(data).status == true) {
+				iziToast.success({
+                    title: 'OK',
+					message: 'Usuario alterado com Sucesso, Favor logar Novamente',
+                    timeout: 2000,
+                    onClosing: function() {
+                        window.location.href = "login.php";
+                    }
+                });
+			}else{
+                iziToast.warning({
+                    title: 'Atenção',
+                    message: 'Erro ao alterar usuario',
+                    timeout: 2000,
+                    onClosing: function() {
+                        window.location.href = "index.php";
+                    }
+                });
+            }
+        });
+	});
+
   $('#main-menu').smartmenus({
     mainMenuSubOffsetX: -1,
     mainMenuSubOffsetY: 4,
