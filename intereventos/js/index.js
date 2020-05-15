@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    // $.ajax({
-    //     method: "GET",
-    //     url: "",
-    //     dataType: "json",
-    //   }).done( (data) => {
-    //     console.log(data);
-
-    // })
+    $.ajax({
+        method: "GET",
+        url: "index_model.php",
+        dataType: "json",
+      }).done( (data) => {
+    })
 
     $("#modal-post").iziModal();    
     $("#newPost").on('click', function() {

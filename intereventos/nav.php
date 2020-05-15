@@ -2,8 +2,10 @@
   <ul id="main-menu" class="sm sm-clean">
     <li><a href="index.php">Home</a></li>
     <li><a href="#">Baladas</a>
-      <ul>
+      <ul id="add_tipo_balada">
+        <?php if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         <li><a  href="#" id="new_balada">Adicionar Nova Balada</a></li>
+        <?php } ?>
         <li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
         <li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
         <li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
