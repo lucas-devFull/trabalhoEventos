@@ -30,7 +30,7 @@ function alteraUsuario($codigo, $email, $nome, $senha){
     if ($senha !== "") {
         $sql = "UPDATE intereventos.usuario SET email='$email', nome='$nome', senha='$senha' WHERE codigo='$codigo'";
     }else{
-        $sql = "UPDATE usuario SET email='$email', nome='$nome' WHERE codigo='$codigo'";
+        $sql = "UPDATE intereventos.usuario SET email='$email', nome='$nome' WHERE codigo='$codigo'";
     }
     $stmt = $PDO->prepare($sql);
     $stmt->execute();

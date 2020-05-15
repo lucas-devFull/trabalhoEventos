@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    // $.ajax({
+    //     method: "GET",
+    //     url: "",
+    //     dataType: "json",
+    //   }).done( (data) => {
+    //     console.log(data);
+
+    // })
+
     $("#modal-post").iziModal();    
     $("#newPost").on('click', function() {
         $('#modal-post').iziModal('open');

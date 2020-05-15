@@ -1,6 +1,10 @@
 <?php include_once("header.php"); ?>
 <div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
-<div id="newPost"> <i class="newPost far fa-plus-square"></i> </div>
+<?php 
+if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
+
+  <div id="newPost"> <i class="newPost far fa-plus-square"></i> </div>
+<?php } ?>
   <div class="col-9">
     <div class="w-100">
       <div class="row">
