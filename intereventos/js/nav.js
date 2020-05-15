@@ -8,6 +8,35 @@ $(function() {
 
 	$("#modal-cadastroUsuario").iziModal();
 
+	$("#novaBalada").on('click', function() {
+		$.ajax({
+            method: "POST",
+            url: "adiciona_balada.php",
+			data: {descricao:$("#nome_balada").val(),id_tipo:$("#tipo_balada").val()}
+          })
+        .done(function(data) {
+            if (JSON.parse(data).status == true) {
+				iziToast.success({
+                    title: 'OK',
+					message: 'Balada cadastrada com Sucesso !!',
+                    timeout: 2000,
+                    onClosing: function() {
+                        location.reload();
+                    }
+                });
+			}else{
+                iziToast.warning({
+                    title: 'Atenção',
+                    message: 'Erro ao cadastrar balada',
+                    timeout: 2000,
+                    onClosing: function() {
+                        location.reload();
+                    }
+                });
+            }
+        });
+	});
+
     $("#configUsuario").on('click', function() {
 		$.ajax({
             method: "POST",

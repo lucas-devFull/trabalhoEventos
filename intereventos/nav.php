@@ -1,3 +1,21 @@
+<?php 
+
+include_once("conexao.php");
+require 'init.php';
+
+$PDO = db_connect();
+
+$sql = "SELECT * FROM tipo_balada";
+$stmt = $PDO->prepare($sql);
+$stmt->execute();
+$tipo_baladas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM balada";
+$stmt = $PDO->prepare($sql);
+$stmt->execute();
+$baladas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <nav role="navigation">
   <ul id="main-menu" class="sm sm-clean">
     <li><a href="index.php">Home</a></li>
@@ -6,16 +24,19 @@
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         <li><a  href="#" id="new_balada">Adicionar Nova Balada</a></li>
         <?php } ?>
-        <li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
-        <li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
-        <li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
-          <ul>
-            <li><a href="http://vadikom.com/about/">About Vadikom</a></li>
-            <li><a href="http://vadikom.com/projects/">Projects</a></li>
-            <li><a href="http://vadikom.com/services/">Services</a></li>
-            <li><a href="http://www.smartmenus.org/about/vadikom/privacy-policy/">Privacy policy</a></li>
-          </ul>
-        </li>
+        <?php foreach ($tipo_baladas as $key => $value) { ?>
+              <li><a href="#"> <?php echo($tipo_baladas[$key]['desc_tipo']); ?> </a>
+                <ul> 
+                <?php foreach ($baladas as $keyBalada => $valueBalada) {
+                  if($baladas[$keyBalada]["id_tipo_balada"] == $tipo_baladas[$key]["id_tipo"]) { ?>
+                      <li>
+                        <a href="#"> <?php echo($baladas[$keyBalada]["desc_balada"]); ?> </a>
+                      </li>
+                    <?php } ?>
+                 <?php } ?>
+                </ul>
+              </li>
+        <?php } ?>
       </ul>
     </li>
     <li><a href="forum.php">Fórum</a></li>
@@ -55,7 +76,7 @@
           </select>
         </div>
         <div style="text-align:end;">
-          <button type="submit" class="btn btn-primary">Nova Balada</button>
+          <button id="novaBalada" class="btn btn-primary">Nova Balada</button>
         </div>
       </form>
      </div>
