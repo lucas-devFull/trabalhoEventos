@@ -50,7 +50,7 @@ require_once 'header.php';
 
       <!-- <div class="card mb-3">
         <div class="card-header pergunta">
-          <h5 class="nome card-title"> Autor: Maria</h5>
+          <h5 class="nome card-title">Maria</h5>
           <p class="card-text descricao float-left">Quando seria a proxuma festa?</p>
           <button class="btn-light float-right text-capitalize">Responder</button>
         </div>
@@ -90,29 +90,13 @@ require_once 'header.php';
       $('[data-toggle="popover"]').popover();
     });
 
-    
-    // $(document).on('click', ".btn-responder-nova-pergunta", (e) => {
-    //   let nome_usuario = $("#nome_usuario").val();
-    //   $("body").attr("data-resposta-open", "1");
-    //   e.stopPropagation();
-    //   $(e.target).siblings(".card-text").addClass("efeito_responder")
-    //   $(e.target).siblings(".card-text").append(`
-    //     <div class="repondendo_pergunta">
-    //       <label class="d-block text-muted text-capitalize" style="font-weight:600">${nome_usuario} : </label>
-    //       <input type="text" value="" name="resposta" id="resposta_pergunta">
-    //       <button class="btn" id="btn-postar-resposta">Responder</button>
-    //     </div>
-    //   `)
-
-    //   $(e.target).attr("disabled",'disabled')
-    // })
     $(document).on('click', ".btn-responder", (e) => {
       let nome_usuario = $("#nome_usuario").val();
       $("body").attr("data-resposta-open", "1");
       $(e.target).closest(".card-text").addClass("efeito_responder")
       $(e.target).closest(".card-text").append(`
         <div class="repondendo_pergunta">
-          <label class="d-block text-muted text-capitalize" style="font-weight:600">${nome_usuario} : </label>
+          <label class="d-block bold text-capitalize" style="font-weight:600">${nome_usuario} : </label>
           <input type="text" value="" name="resposta" id="resposta_pergunta">
           <button class="btn" id="btn-postar-resposta">Responder</button>
         </div>
@@ -162,6 +146,11 @@ require_once 'header.php';
       let autor = $("#nome_usuario").val();
       let id_postagem = parseInt($("#perguntasRespostas").attr('data-aviso'));
 
+      if (!descricao || descricao.length >= 0) {
+        alert("Não é possivel postar sem escrever nada.");
+        return
+      }
+
       let dados = {
         autor,
         descricao,
@@ -180,7 +169,7 @@ require_once 'header.php';
         $("#perguntasRespostas").append(`
         <div class="card mb-3 id_pergunta" data-id-pergunta="${data.id}">
           <div class="card-header pergunta">
-            <h5 class="nome card-title text-capitalize"> Autor: ${autor}</h5>
+            <h5 class="nome card-title text-capitalize">${autor}</h5>
             <p class="card-text descricao float-left">${descricao}</p>
             <button class="btn-light float-right text-capitalize">Responder</button>
           </div>
@@ -225,11 +214,17 @@ require_once 'header.php';
             $(`div[data-id-pergunta=${postagem.id_pergunta}]`).append(`
               <div class="card-body p-0 id_pergunta" style="margin-left: ${espacoResposta + marginIndext}px" data-id-pergunta=${postagem.id}>
                 <div class="card-text resposta">
-                  <span class="text-muted text-capitalize"> ${postagem.autor}</span>
+                  <span class="text-capitalize bold"> ${postagem.autor}</span>
                   <div class="card-text ">
-                    Resposta : ${postagem.descricao}
-                    <button class="btn-light text-capitalize btn-responder">Responder</button>
+                    ${postagem.descricao}
                   </div>
+                  <button class="btn-light text-capitalize btn-responder">Responder</button>
+                    <span>
+                      <a href="#">Compartilhar</a>
+                      <i style="color:#2aa9e0" class="fa fa-twitter-square" aria-hidden="true"></i>
+                      <i style="color:blue" class="fa fa-facebook" aria-hidden="true"></i>
+                      <i style="color:green" class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </span>
                 </div>
               </div>
             `)
@@ -237,11 +232,17 @@ require_once 'header.php';
             $("#perguntasRespostas").append(`
               <div class="card mb-3 id_pergunta" data-id-pergunta=${postagem.id}>
                 <div class="card-header pergunta">
-                  <h5 class="nome card-title"> Autor: ${postagem.autor}</h5>
+                  <h5 class="nome card-title text-capitalize bold">${postagem.autor}</h5>
                   <p class="w-100 card-text descricao float-left">
                     ${postagem.descricao}
-                    <button class="btn-light float-right text-capitalize btn-responder">Responder</button>
                   </p>
+                  <button class="btn-light text-capitalize btn-responder">Responder</button>
+                    <span>
+                      <a href="#">Compartilhar</a>
+                      <i style="color:#2aa9e0" class="fa fa-twitter-square" aria-hidden="true"></i>
+                      <i style="color:blue" class="fa fa-facebook" aria-hidden="true"></i>
+                      <i style="color:green" class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </span>
                 </div>
               </div>
             `)
