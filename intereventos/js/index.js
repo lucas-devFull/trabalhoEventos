@@ -1,4 +1,21 @@
 $(document).ready(function() {
+
+    var win = $(window);
+	win.scroll(function() {
+		if ($(document).height() - win.height() == win.scrollTop()) {
+			// $('#loading').show();
+
+			$.ajax({
+				url: 'index_mopdel.php',
+				dataType: 'json',
+				success: function(dados) {
+					// $('#feed_noticias').append(dados);
+					// $('#loading').hide();
+				}
+			});
+		}
+	});
+
     $.ajax({
         method: "GET",
         url: "index_model.php",

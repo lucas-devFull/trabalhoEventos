@@ -1,5 +1,5 @@
 <?php include_once("header.php"); ?>
-<div class="row mb-5" style="display:flex; justify-content:center;margin-top:2%">
+<div class="row mb-5" id="feed_noticias" style="display:flex; justify-content:center;margin-top:2%">
 <?php 
 if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
 
