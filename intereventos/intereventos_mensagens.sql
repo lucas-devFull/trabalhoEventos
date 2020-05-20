@@ -26,10 +26,11 @@ CREATE TABLE `mensagens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(50) NOT NULL,
   `autor` varchar(30) NOT NULL,
-  `id_postagem` int(15) NOT NULL,
+  `id_post` int(15) NOT NULL,
   `id_pergunta` int(15) DEFAULT NULL,
   `data_postagem` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN KEY ('id_post') REFERENCES 'feed_noticias'('id_post')
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

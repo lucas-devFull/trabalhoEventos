@@ -39,7 +39,7 @@ $baladas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php } ?>
       </ul>
     </li>
-    <li><a href="forum.php">Fórum</a></li>
+    <!-- <li><a href="forum.php">Fórum</a></li> -->
     <li> <a href="servicos.php"> Serviços / Depoimentos </a></li>
     <?php if (!isset($_SESSION['logged_in'])) { ?> 
       <li><a class="nav-link" href="login.php"> Login <i class="fas fa-user-circle"></i> </a></li>

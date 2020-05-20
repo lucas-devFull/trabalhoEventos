@@ -43,10 +43,9 @@ require_once 'check.php';
 
       <div class="col-12 text-center mt-3">
         <h1 class="display-3 text-light"><i class="fa fa-comments text-light"></i> Forum de Avisos</h1>
-        <p class="lead text-light">Bem Vindo à Comunidade</p>
-        <p class="lead text-light text-capitalize"> <?php echo $_SESSION['username']; ?> | <a class="text-secondary" href="logout.php">Sair</a></p>
+        <p class="lead text-light">Bem Vindo à Comunidade <?php echo $_SESSION['username']; ?></p>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="1" onclick="box_mensagem(this)">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="postagem_comentarios" data-id-post onclick="box_mensagem(this)">
         <div class="card mb-3 card-avisos">
           <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
           <div class="card-body">
@@ -57,7 +56,7 @@ require_once 'check.php';
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="2" onclick="box_mensagem(this)">
+      <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="2" onclick="box_mensagem(this)">
         <div class="card mb-3 card-avisos">
           <img class="card-group" src="imagem/Daniel2.jpg" alt="Card image cap">
           <div class="card-body">
@@ -78,10 +77,10 @@ require_once 'check.php';
             <p class="text-muted comentarios">Comentarios: 12</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
-    <div id="perguntasRespostas" data-aviso="1">
+    <div id="perguntasRespostas" data-aviso>
 
       <!-- <div class="card mb-3">
         <div class="card-header pergunta">
@@ -121,6 +120,12 @@ require_once 'check.php';
   <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
 <?php require "footer.php" ?>
   <script>
+  $(document).ready(function() {
+    recarregarMensagens(window.location.href.split("=")[1])
+    $("#perguntasRespostas").attr("data-aviso", window.location.href.split("=")[1])
+    $("#postagem_comentarios").attr("data-id-post", window.location.href.split("=")[1])
+  });
+
     $(function() {
       $('[data-toggle="popover"]').popover();
     });
@@ -218,7 +223,7 @@ require_once 'check.php';
     })
 
     function box_mensagem(elemento) {
-      let id_postagem = $(elemento).attr('id');
+      let id_postagem = $(elemento).attr('data-id-post');
       recarregarMensagens(id_postagem)
     }
 
@@ -253,9 +258,11 @@ require_once 'check.php';
                   <button class="btn-light text-capitalize btn-responder">Responder</button>
                     <span>
                       <a href="#">Compartilhar</a>
-                      <i style="color:#2aa9e0" class="fa fa-twitter-square" aria-hidden="true"></i>
-                      <i style="color:blue" class="fa fa-facebook" aria-hidden="true"></i>
-                      <i style="color:green" class="fa fa-whatsapp" aria-hidden="true"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-facebook-square"></i>
+                      <i class="fab fa-whatsapp"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-linkedin-in"></i>
                     </span>
                 </div>
               </div>
@@ -271,9 +278,11 @@ require_once 'check.php';
                   <button class="btn-light text-capitalize btn-responder">Responder</button>
                     <span>
                       <a href="#">Compartilhar</a>
-                      <i style="color:#2aa9e0" class="fa fa-twitter-square" aria-hidden="true"></i>
-                      <i style="color:blue" class="fa fa-facebook" aria-hidden="true"></i>
-                      <i style="color:green" class="fa fa-whatsapp" aria-hidden="true"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-facebook-square"></i>
+                      <i class="fab fa-whatsapp"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-linkedin-in"></i>
                     </span>
                 </div>
               </div>

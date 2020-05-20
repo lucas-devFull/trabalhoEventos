@@ -114,6 +114,7 @@
     padding: 5px;
     border-radius: 2px;
     cursor: pointer;
+    margin-bottom: 1em;
 }
 
 .btn-nova-mensagem button {

@@ -22,7 +22,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
             <small class="text-muted"><span>Endereco: </span> Rua: josé rodrigo da silva n:45, jardim aeroport</small>
           </p>
           <p class="text-right">
-            <small><a href="forum.php"> Pergunte ao Forúm -></a></small>
+            <small><a href="forum.php?id=1"> Pergunte ao Forúm -></a></small>
           </p>
         </div>
       </div>
