@@ -145,8 +145,7 @@ require_once 'header.php';
       let descricao = $("#nova_resposta").val();
       let autor = $("#nome_usuario").val();
       let id_postagem = parseInt($("#perguntasRespostas").attr('data-aviso'));
-
-      if (!descricao || descricao.length >= 0) {
+      if (!descricao || descricao.length <= 0) {
         alert("Não é possivel postar sem escrever nada.");
         return
       }
@@ -168,10 +167,10 @@ require_once 'header.php';
         $("#nova_resposta").val("");
         $("#perguntasRespostas").append(`
         <div class="card mb-3 id_pergunta" data-id-pergunta="${data.id}">
-          <div class="card-header pergunta">
-            <h5 class="nome card-title text-capitalize">${autor}</h5>
-            <p class="card-text descricao float-left">${descricao}</p>
-            <button class="btn-light float-right text-capitalize">Responder</button>
+          <div class="card-header card-text pergunta">
+            <h5 class="nome card-title text-capitalize bold">${autor}</h5>
+            <p class="w-100 card-text descricao float-left">${descricao}</p>
+            <button class="btn-light text-capitalize btn-responder">Responder</button>
           </div>
         </div>
       `);
@@ -179,8 +178,6 @@ require_once 'header.php';
       }).fail((fail) => {
         alert("fail")
         console.log(fail);
-        
-        
       });
 
     })
@@ -231,7 +228,7 @@ require_once 'header.php';
           } else {
             $("#perguntasRespostas").append(`
               <div class="card mb-3 id_pergunta" data-id-pergunta=${postagem.id}>
-                <div class="card-header pergunta">
+                <div class="card-header card-text pergunta">
                   <h5 class="nome card-title text-capitalize bold">${postagem.autor}</h5>
                   <p class="w-100 card-text descricao float-left">
                     ${postagem.descricao}
