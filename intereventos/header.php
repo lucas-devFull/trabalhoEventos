@@ -21,6 +21,7 @@ echo($_SESSION['admin']);
   <link href='smartmenus-1.1.0/css/sm-core-css.css' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="smartmenus-1.1.0/css/sm-clean/sm-clean.css">
   <link rel="stylesheet" href="css/css/nav2.css">
+  <link rel="stylesheet" href="css/css/forum.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Inter Eventos</title>
 </head>
