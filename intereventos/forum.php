@@ -1,7 +1,7 @@
 <?php
 session_start();
-echo($_SESSION['logged_in'] == true ?"logado" : "deslogado");
-echo($_SESSION['admin']);
+// echo($_SESSION['logged_in'] == true ?"logado" : "deslogado");
+// echo($_SESSION['admin']);
 require_once 'init.php';
 require_once 'check.php';
 // require_once 'header.php';
@@ -264,7 +264,6 @@ require_once 'check.php';
                       <i class="fab fa-facebook-square"></i>
                       <i class="fab fa-whatsapp"></i>
                       <i class="fab fa-instagram"></i>
-                      <i class="fab fa-linkedin-in"></i>
                     </span>
                 </div>
               </div>
@@ -284,7 +283,6 @@ require_once 'check.php';
                       <i class="fab fa-facebook-square"></i>
                       <i class="fab fa-whatsapp"></i>
                       <i class="fab fa-instagram"></i>
-                      <i class="fab fa-linkedin-in"></i>
                     </span>
                 </div>
               </div>
@@ -292,6 +290,9 @@ require_once 'check.php';
           }
         }
 
+        $("#img").attr("src", "")
+        $("#data_evento").html("")
+        $(`#card_texto_post`).html("")
         for(const post of resp.post) {
           console.log(post);
           var dataFormatada = transformaData(post.data_post)

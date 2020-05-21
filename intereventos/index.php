@@ -33,13 +33,12 @@ if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         <a class="hi-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
         <a class="hi-icon" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a class="hi-icon" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=InterEventos"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 
-
+<!-- 
   <div class="col-9">
     <div class="w-100">
       <div class="row">
@@ -68,7 +67,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         <a class="hi-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
         <a class="hi-icon" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a class="hi-icon" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=InterEventos"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -102,10 +100,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         <a class="hi-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a class="hi-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
         <a class="hi-icon" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a class="hi-icon" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=InterEventos"><i class="fab fa-whatsapp"></i></a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <div id="modal-post" aria-hidden="true" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;">
@@ -142,6 +139,14 @@ if (isset($_SESSION['logged_in']) && $_SESSION['admin'] == 1) { ?>
         </div>
         <div class="form-group">
           <input type="date" class="form-control" id="data_evento">
+        </div>
+        <div class="form-group">
+          <div class="row">
+              <div class="col-md-3"><input type="text" class="form-control" id="link_fb" placeholder=' link facebook'> </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_instagram" placeholder=' link instagram'> </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_twitter" placeholder=' link twitter'> </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_wpp" placeholder=' link whatsapp'> </div>
+          </div>
         </div>
         <div style="text-align:end;">
           <button type="submit" class="btn btn-primary">Postar</button>

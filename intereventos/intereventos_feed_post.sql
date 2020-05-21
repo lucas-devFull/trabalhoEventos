@@ -8,7 +8,6 @@ CREATE TABLE `feed_post` (
   `link_fb` varchar(250) DEFAULT NULL,
   `link_instagram` varchar(250) DEFAULT NULL,
   `link_twitter` varchar(250) DEFAULT NULL,
-  `link_linkedin` varchar(250) DEFAULT NULL,
   `link_wpp` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id_post`)
 );
