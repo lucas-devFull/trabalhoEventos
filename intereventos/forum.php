@@ -38,24 +38,27 @@ require_once 'check.php';
     <hr class="bg-light" style="width:75%;">
     <?php require 'nav.php'?>
   </div>
-  <div class="container-fluid ">
-    <div class="row">
+  <div class="container-fluid" style="display: flex;flex-direction: column;align-items: center;">
+    <div class="row" id='comentarios_post' style='justify-content:center;'>
 
       <div class="col-12 text-center mt-3">
         <h1 class="display-3 text-light"><i class="fa fa-comments text-light"></i> Forum de Avisos</h1>
         <p class="lead text-light">Bem Vindo à Comunidade <?php echo $_SESSION['username']; ?></p>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="postagem_comentarios" data-id-post onclick="box_mensagem(this)">
+
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="postagem_comentarios" data-id-post onclick="box_mensagem(this)">
         <div class="card mb-3 card-avisos">
-          <img class="card-group" src="imagem/galala.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="nome card-title">Festa do Sertanejo</h5>
-            <p class="card-text descricao">Uma das maiores festa sertaneja acontece aqui, venha se divertir!</p>
-            <p class="card-text endereco"><small class="text-muted">Rua: josé rodrigo da silva n:45, jardim aeroport</small></p>
-            <p class="text-muted comentarios">Comentarios: 24</p>
+          <div class="data_evento" id="data_evento"> 
+            
+          </div>
+          <img class="card-group"  src id='img' alt="Card image cap">
+          <div class="card-body card_texto" id="card_texto_post">
           </div>
         </div>
       </div>
+    </div>
+        
+      <!-- </div> -->
       <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="2" onclick="box_mensagem(this)">
         <div class="card mb-3 card-avisos">
           <img class="card-group" src="imagem/Daniel2.jpg" alt="Card image cap">
@@ -78,9 +81,8 @@ require_once 'check.php';
           </div>
         </div>
       </div> -->
-    </div>
 
-    <div id="perguntasRespostas" data-aviso>
+    <div id="perguntasRespostas" data-aviso  style="width: 100%;display: flex;flex-direction: column;align-items: center;">
 
       <!-- <div class="card mb-3">
         <div class="card-header pergunta">
@@ -100,16 +102,16 @@ require_once 'check.php';
 
     </div>
 
-    <div id="box-nova-mensagem">
+    <div id="box-nova-mensagem" style="width: 83%;">
       <div class="perguntaPraResponder none"></div>
       <textarea name="nova_resposta" id="nova_resposta" cols="30" rows="10"></textarea>
       <div class="btn-nova-mensagem">
         <button class="btn btn-dark" id="salvar-nova-resposta">Postar</button>
       </div>
     </div>
-  </div>
   <input type="hidden" name="nome_usuario" id="nome_usuario" value="<?php echo $_SESSION['username']; ?>">
 
+</div>
 
 
 
@@ -206,7 +208,7 @@ require_once 'check.php';
       }).done( (data) => {
         $("#nova_resposta").val("");
         $("#perguntasRespostas").append(`
-        <div class="card mb-3 id_pergunta" data-id-pergunta="${data.id}">
+        <div class="card mb-3 id_pergunta" data-id-pergunta="${data.id}" style="width:83% !important;">
           <div class="card-header card-text pergunta">
             <h5 class="nome card-title text-capitalize bold">${autor}</h5>
             <p class="w-100 card-text descricao float-left">${descricao}</p>
@@ -244,7 +246,7 @@ require_once 'check.php';
       }).done((resp) => {
 
         $("#perguntasRespostas").html("");
-        for(const postagem of resp) {
+        for(const postagem of resp.comentarios) {
           if( parseInt(postagem.id_pergunta) ) {
             let marginIndext = 15;
             let espacoResposta = parseInt($(`div[data-id-pergunta=${postagem.id_pergunta}]`).css("margin-left").replace("px",""))
@@ -269,7 +271,7 @@ require_once 'check.php';
             `)
           } else {
             $("#perguntasRespostas").append(`
-              <div class="card mb-3 id_pergunta" data-id-pergunta=${postagem.id}>
+              <div class="card mb-3 id_pergunta" data-id-pergunta=${postagem.id} style="width:83% !important;">
                 <div class="card-header card-text pergunta">
                   <h5 class="nome card-title text-capitalize bold">${postagem.autor}</h5>
                   <p class="w-100 card-text descricao float-left">
@@ -289,10 +291,48 @@ require_once 'check.php';
             `)
           }
         }
-        
+
+        for(const post of resp.post) {
+          console.log(post);
+          var dataFormatada = transformaData(post.data_post)
+
+          $("#img").attr("src",`imagem/galala_post_${post.id_post}.jpg`)
+          $("#data_evento").append(`
+            <div class="mt-2"> ${dataFormatada.mes} </div>
+            <div> ${dataFormatada.dia} </div>`
+          )
+
+          $(`#card_texto_post`).append(`
+          <h5 class="card-title text-center" style="color:white;font-size: 200%;"> ${post.titulo_post}</h5>
+            <p class="card-text text-center texto_central "style="color:white;" >${post.descricao_post}</p>
+            <p class="card-text text-center endereco-page" style="font-size:95%;">
+              <small class="text-muted"><span>Endereco: </span> ${post.endereco_post}</small>
+            </p>
+          `)
+          
+        }
       }).fail((fail) =>{
         console.log(fail);
       });
+    }
+
+    function transformaData(stringData) {
+      var data = stringData.split("-")
+      var mesDoAno = {
+        '01':'Jan',
+        '02':'Fev',
+        '03':'Mar',
+        '04':'Abr',
+        '05':'Mai',
+        '06':'Jun',
+        '07':'Jul',
+        '08':'Ago',
+        '09':'Set',
+        '10':'Out',
+        '11':'Nov',
+        '12':'Dez',
+      }
+      return {"mes":mesDoAno[data[1]], "dia":data[2]}
     }
 
     

@@ -26,7 +26,14 @@ function get($PDO, $id_post=0) {
     $stmt = $PDO->prepare($sql);
     // $stmt->bindParam('id_post', $id_post, PDO::PARAM_INT);
     $stmt->execute();
-    return $stmt->fetchAll();
+    $comentarios = $stmt->fetchAll();
+
+    $sql = "SELECT * FROM feed_post where id_post = $id_post";
+    $stmt = $PDO->prepare($sql);
+    $stmt->execute();
+    $post = $stmt->fetchAll();
+
+    return array("comentarios" => $comentarios, "post" => $post);
 }
 
 
