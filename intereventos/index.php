@@ -673,7 +673,7 @@
       </div>
      
     <div style="padding:5%"> 
-      <form>
+      <div>
         <div class="form-group">
           <input type="text" class="form-control" id="titulo_evento" aria-describedby="Titulo" placeholder="Titulo">
         </div>
@@ -709,9 +709,9 @@
           </div>
         </div>
         <div style="text-align:end;">
-          <button type="submit" class="btn btn-primary">Postar</button>
+          <button class="btn btn-primary" id="novo_post" >Postar</button>
         </div>
-      </form>
+      </div>
      </div>
     </div>
   </div>

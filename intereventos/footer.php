@@ -1,8 +1,12 @@
-<div class="container-fluid bg-light" style="padding: 4% 2% 2% 2%;">
+<footer class="container-fluid bg-light" style="padding: 1% 2% 0% 2%;">
   <div class="row text-dark">
     <div class="col-sm-4 col-md-5  text-dark">
       <h3 style="text-align: center"> Sobre Nós </h3>
       <p>Um site desenvolvido para auxiliar usuários que frequentam baladas por esse Brasil a fora com o intuito de economizar tempo por procurar baladas ou afazeres nos finais de semana e feriado</p>
+      <blockquote class="blockquote mt-3 mb-1" style="text-align:center;">
+          <!-- <p class="mb-0"> A vida é uma festa. Ou você se diverte, ou você dança. </p> -->
+        <footer class="blockquote-footer"> Entreterimento <cite title="Source Title">Inter Eventos </cite></footer>
+        </blockquote>
     </div>
 
     <div class="col-sm-4 col-md-5 text-center text-dark" style="display: flex;justify-content: flex-end"> 
@@ -30,14 +34,10 @@
       <div class="col-md-12">
       <div>
       </div>
-  <hr style="background: #1f2124;">
-        <blockquote class="blockquote mt-3 mb-1" style="text-align:center;">
-          <p class="mb-0"> A vida é uma festa. Ou você se diverte, ou você dança. </p>
-          <footer class="blockquote-footer"> Entreterimento <cite title="Source Title">Inter Eventos </cite></footer>
-        </blockquote>
+  <!-- <hr style="background: #1f2124;"> -->
       </div>
   </div>
-</div>
+</footer>
 <footer style="width: 100%;background: #f8f9fa;">&copy; Copyright 2020 Inter Eventos Ltda</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
