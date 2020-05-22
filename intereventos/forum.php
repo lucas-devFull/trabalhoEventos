@@ -28,14 +28,14 @@ require_once 'check.php';
 </head>
 <body style="background: #212529;">
   <div class="fundo-logo">
-    <div>
+    <!-- <div>
       <div class="d-flex justify-content-center p-3">
         <a href="index.php" class="text-center">
           <img src="imagem/slidePronto.jpg" width="50%" class="img img-responsive" alt="Inter Eventos" >
         </a>
       </div>
     </div>
-    <hr class="bg-light" style="width:75%;">
+    <hr class="bg-light" style="width:75%;"> -->
     <?php require 'nav.php'?>
   </div>
   <div class="container-fluid" style="display: flex;flex-direction: column;align-items: center;">

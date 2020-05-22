@@ -17,7 +17,7 @@ $baladas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <nav role="navigation">
-  <ul id="main-menu" class="sm sm-clean">
+  <ul id="main-menu" class="sm sm-clean" style="padding:1em">
     <li><a href="index.php">Home</a></li>
     <li><a href="#">Baladas</a>
       <ul id="add_tipo_balada">

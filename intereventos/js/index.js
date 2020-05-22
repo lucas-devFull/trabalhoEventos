@@ -1,20 +1,11 @@
 $(document).ready(function() {
 
-    var win = $(window);
-	win.scroll(function() {
-		if ($(document).height() - win.height() == win.scrollTop()) {
-			// $('#loading').show();
-
-			$.ajax({
-				url: 'index_mopdel.php',
-				dataType: 'json',
-				success: function(dados) {
-					// $('#feed_noticias').append(dados);
-					// $('#loading').hide();
-				}
-			});
-		}
-	});
+    $('#feed_noticias').scroll(function() {
+        if(($('#feed_noticias').height() < ($('#feed_noticias').scrollTop())) {
+            console.log($('#feed_noticias').scrollTop())
+            console.log($('#feed_noticias').height())
+        }
+    });
 
     $.ajax({
         method: "GET",

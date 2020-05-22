@@ -26,14 +26,14 @@ session_start();
 </head>
 <body style="background: #212529;">
   <div class="fundo-logo">
-    <div>
+    <!-- <div>
       <div class="d-flex justify-content-center p-3">
         <a href="index.php" class="text-center">
           <img src="imagem/slidePronto.jpg" width="50%" class="img img-responsive" alt="Inter Eventos" >
         </a>
       </div>
     </div>
-    <hr class="bg-light" style="width:75%;">
+    <hr class="bg-light" style="width:75%;"> -->
     <?php require 'nav.php'?>
 
     <!-- <button id="get"> get </button> -->
