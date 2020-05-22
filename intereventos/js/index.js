@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
     $('#feed_noticias').scroll(function() {
-        if(($('#feed_noticias').height() < ($('#feed_noticias').scrollTop())) {
-            console.log($('#feed_noticias').scrollTop())
-            console.log($('#feed_noticias').height())
+        var posicaoScroll  = document.getElementById("feed_noticias").offsetHeight +  document.getElementById("feed_noticias").scrollTop + 10;
+        var tamanhoScroll = document.getElementById("feed_noticias").scrollHeight;        
+        if(posicaoScroll >= tamanhoScroll){
+            console.log("passou");
+            
         }
     });
 
