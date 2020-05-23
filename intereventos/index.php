@@ -15,7 +15,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -81,7 +81,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -114,7 +114,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -147,7 +147,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -179,7 +179,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -245,7 +245,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -278,7 +278,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -311,7 +311,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -343,7 +343,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -409,7 +409,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -442,7 +442,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -475,7 +475,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -507,7 +507,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -573,7 +573,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -606,7 +606,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -639,7 +639,7 @@
             <div class="mt-2"> Teste </div>
             <div> 13 </div>
           </div>
-            <img style="width:100%;" src="imagem/galala.jpg" alt="Card image cap">
+            <img style="width:100%;" src="imagem/imagem_default.png" alt="Card image cap">
           </div>
           <div class="card-body card_texto  col-md-6">
             <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
@@ -689,7 +689,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                <textarea type="text" class="form-control textArea-modal"  rols='6' placeholder="Texto principal"></textarea>
+                <textarea type="text" class="form-control textAreao-modal" id='textoPrincipal' rols='6' placeholder="Texto principal"></textarea>
               </p>
             </div>
           </div>

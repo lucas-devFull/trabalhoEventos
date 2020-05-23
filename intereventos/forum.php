@@ -188,8 +188,13 @@ require_once 'check.php';
       let autor = $("#nome_usuario").val();
       let id_postagem = parseInt($("#perguntasRespostas").attr('data-aviso'));
       if (!descricao || descricao.length <= 0) {
-        alert("Não é possivel postar sem escrever nada.");
-        return
+        iziToast.warning({
+          title: 'OK',
+          message: 'Não é possivel postar sem escrever nada. !!',
+          timeout: 2000,
+          position:'topCenter'
+        });
+        return;
       }
 
       let dados = {
