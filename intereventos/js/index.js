@@ -3,50 +3,53 @@ $(document).ready(function() {
     $.ajax({
         method: "POST",
         url: "index_model.php",
-        // data:{action:""}
+        data:{acao:"select"},
         dataType: "json",
       }).done( (data) => {
-        dados = JSON.parse(data)
-        for (const i in dados) {
-            console.log(dados);
+          dados = JSON.parse(data).midia
+          console.log(dados);
+          
+        //   console.log(dados);
+        // for (const i in dados) {
+            // console.log(dados[i]);
             // var dataFormatada = transformaData(dados.)
             
-        }
+        // }
 
-        // $('#feed_noticias').append(`
-            // <div class="col-9">
-            //   <div class="w-100">
-                // <div class="row">
-                //   <div class="col-md-6 col-imagem">
-                //   <div class="data_evento"> 
-                    // <div class="mt-2"> ${dataFormatada.mes} </div>
-                    // <div> ${dataFormatada.dia} </div>
-                //   </div>
-                    // <img style="width:100%;" src="imagem/${data.url_imagem}_post_${data.id_post}.jpg" alt="Card image cap">
-                //   </div>
-                //   <div class="card-body card_texto  col-md-6">
-                    // <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
-                    // <p class="card-text text-center texto_central "style="color:white;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem odio necessitatibus quo ratione magnam alias expedita, nisi incidunt dolorem laborum ad vero illo laboriosam molestias, enim consectetur, quidem hic voluptate!</p>
-                    // <p class="card-text text-center endereco-page" style="font-size:95%;">
-                    //   <small class="text-muted"><span>Endereco: </span> Rua: josé rodrigo da silva n:45, jardim aeroport</small>
-                    // </p>
-                    // <p class="text-right">
-                    //   <small><a href="forum.php?id=1"> Pergunte ao Forúm -></a></small>
-                    // </p>
-                //   </div>
-                // </div>
-            //   </div>
-// 
-            //   <div class="social-buttons">
-                // <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
-                //   <a class="hi-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                //   <a class="hi-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                //   <a class="hi-icon" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                //   <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=InterEventos"><i class="fab fa-whatsapp"></i></a>
-                // </div>
-            //   </div>
-            // </div>
-        // `)      
+        $('#feed_noticias').append(`
+            <div class="col-9">
+              <div class="w-100">
+                <div class="row">
+                  <div class="col-md-6 col-imagem">
+                  <div class="data_evento"> 
+                    <div class="mt-2">  </div>
+                    <div>  </div>
+                  </div>
+                    <img style="width:100%;" src="data:image/jpeg;base64,${dados}" alt="Card image cap">
+                  </div>
+                  <div class="card-body card_texto  col-md-6">
+                    <h5 class="card-title text-center" style="color:white;font-size: 200%;">Festa do Sertanejo</h5>
+                    <p class="card-text text-center texto_central "style="color:white;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem odio necessitatibus quo ratione magnam alias expedita, nisi incidunt dolorem laborum ad vero illo laboriosam molestias, enim consectetur, quidem hic voluptate!</p>
+                    <p class="card-text text-center endereco-page" style="font-size:95%;">
+                      <small class="text-muted"><span>Endereco: </span> Rua: josé rodrigo da silva n:45, jardim aeroport</small>
+                    </p>
+                    <p class="text-right">
+                      <small><a href="forum.php?id=1"> Pergunte ao Forúm -></a></small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-buttons">
+                <div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a" style="">
+                  <a class="hi-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                  <a class="hi-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a class="hi-icon" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a class="hi-icon" data-action="share/whatsapp/share" href="whatsapp://send?text=InterEventos"><i class="fab fa-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+        `)      
     })      
 
     $('#feed_noticias').scroll(function() {

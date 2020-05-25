@@ -104,7 +104,7 @@ html{
     color: white;
     position: absolute;
     padding: 2% 2% 4% 2%!important;
-    background: black;
+    background: #0d0d0e;
     left: 10%;
     border-radius: 6%;
     display: flex;
@@ -220,4 +220,10 @@ html{
 
 .select2-container--open{
     border: none !important;
+}
+
+.divInteira{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,4 +1,4 @@
-<footer class="container-fluid bg-light" style="padding: 1% 2% 0% 2%;">
+<footer class="container-fluid bg-light" style="padding: 1% 2% 0% 2%;z-index: 10;">
   <div class="row text-dark">
     <div class="col-sm-4 col-md-5  text-dark">
       <h3 style="text-align: center"> Sobre Nós </h3>
@@ -39,6 +39,7 @@
   </div>
 </footer>
 <footer style="width: 100%;background: #f8f9fa;">&copy; Copyright 2020 Inter Eventos Ltda</footer>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>

@@ -1,5 +1,5 @@
 html{
-  /* overflow: overlay; */
+  overflow: overlay;
 }
 
 @keyframes swing {
