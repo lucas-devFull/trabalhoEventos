@@ -302,7 +302,7 @@ require_once 'check.php';
           console.log(post);
           var dataFormatada = transformaData(post.data_post)
 
-          $("#img").attr("src",`imagem/galala_post_${post.id_post}.jpg`)
+          $("#img").attr("src",(post.midia != null && post.midia != "" && post.midia != undefined)? "data:image/png;base64,"+post.midia : "imagem/imagem_default.gif")
           $("#data_evento").append(`
             <div class="mt-2"> ${dataFormatada.mes} </div>
             <div> ${dataFormatada.dia} </div>`

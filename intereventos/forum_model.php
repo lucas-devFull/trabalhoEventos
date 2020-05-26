@@ -28,11 +28,11 @@ function get($PDO, $id_post=0) {
     $stmt->execute();
     $comentarios = $stmt->fetchAll();
 
-    $sql = "SELECT * FROM feed_post where id_post = $id_post";
+
+    $sql = "SELECT *,TO_BASE64(midia) as midia FROM intereventos.feed_post left join midia on id_post_midia = id_post where id_post = $id_post";
     $stmt = $PDO->prepare($sql);
     $stmt->execute();
-    $post = $stmt->fetchAll();
-
+    $post = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return array("comentarios" => $comentarios, "post" => $post);
 }
 

@@ -3,7 +3,7 @@ session_start();
 // echo($_SESSION['logged_in'] == true ?"logado" : "deslogado");
 // echo($_SESSION['admin']);
 require_once 'init.php';
-require_once 'check.php';
+// require_once 'check.php';
 // require_once 'header.php';
 ?>
 <!DOCTYPE html>
