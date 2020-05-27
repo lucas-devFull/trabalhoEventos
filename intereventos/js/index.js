@@ -1,7 +1,8 @@
 var imagem = []
 var tipoMidia = []
 $(document).ready(function() {
-    $.ajax({
+  $("#data_evento").attr("min", new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear())
+      $.ajax({
         method: "POST",
         url: "index_model.php",
         data:{acao:"select"},
@@ -120,72 +121,87 @@ $(document).ready(function() {
     
 
     $("#novo_post").on('click', function() {
-      var valid = false; 
-      $(".input-obrigatoria").each(function(index){
-        if ($(this).val() == "" || $(this).val() == undefined || $(this).val() == null) {
-          valid = true;
+
+        var dataSelecionada = $("#data_evento").val().split("-")
+        var valid = false;
+        var validaData = false; 
+
+        $(".input-obrigatoria").each(function(index){
+          if ($(this).val() == "" || $(this).val() == undefined || $(this).val() == null) {
+            valid = true;
+          }
+        })
+
+        if (dataSelecionada[0] < new Date().getFullYear() ||  dataSelecionada[1] < new Date().getMonth()+1 || dataSelecionada[2] < new Date().getDate()) {
+          validaData = true;
         }
-      })
-      console.log(valid);
       
         if(valid == false ){
-          var dadosForm = new FormData();
-          dadosForm.append("file",imagem)
-          dadosForm.append("tipoMidia", tipoMidia)
-          dadosForm.append("acao", "insert")
-          dadosForm.append('titulo', $("#titulo_evento").val())
-          dadosForm.append('descricao', $("#textoPrincipal").val())
-          dadosForm.append('endereco', $("#endereco_evento").val())
-          dadosForm.append('data', $("#data_evento").val())
-          dadosForm.append('link_fb', $("#link_fb").val())
-          dadosForm.append('link_insta', $("#link_instagram").val())
-          dadosForm.append('link_tt', $("#link_twitter").val())
-          dadosForm.append('link_wpp', $("#link_wpp").val())
-          $.ajax({
-              method: "POST",
-              url: "index_model.php",
-              dataType: 'script',
-              cache: false,
-              contentType: false,
-              processData: false,
-              data: dadosForm,
-              type: 'post',
-            }).done( (data) => {
-              if (JSON.parse(data).status == true) {
-                  $("input").val("")
-                  iziToast.success({
-                      title: 'OK',
-				  	          message: 'Postagem Cadastrada com Sucesso !!',
-                      timeout: 2000,
-                      onClosing: function() {
-                          location.reload();
-                      }
-                  });
-              }else{
-                  iziToast.warning({
-                      title: 'Atenção',
-                      message: 'Erro ao realizar Post',
-                      timeout: 2000,
-                      onClosing: function() {
-                          location.reload();
-                      }
-                  });          
-              }
-          })
+          if(validaData == false){
+            var dadosForm = new FormData();
+            dadosForm.append("file",imagem)
+            dadosForm.append("tipoMidia", tipoMidia)
+            dadosForm.append("acao", "insert")
+            dadosForm.append('titulo', $("#titulo_evento").val())
+            dadosForm.append('descricao', $("#textoPrincipal").val())
+            dadosForm.append('endereco', $("#endereco_evento").val())
+            dadosForm.append('data', $("#data_evento").val())
+            dadosForm.append('link_fb', $("#link_fb").val())
+            dadosForm.append('link_insta', $("#link_instagram").val())
+            dadosForm.append('link_tt', $("#link_twitter").val())
+            dadosForm.append('link_wpp', $("#link_wpp").val())
+            $.ajax({
+                method: "POST",
+                url: "index_model.php",
+                dataType: 'script',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: dadosForm,
+                type: 'post',
+              }).done( (data) => {
+                if (JSON.parse(data).status == true) {
+                    $("input").val("")
+                    iziToast.success({
+                        title: 'OK',
+				    	          message: 'Postagem Cadastrada com Sucesso !!',
+                        timeout: 2000,
+                        onClosing: function() {
+                            location.reload();
+                        }
+                    });
+                }else{
+                    iziToast.warning({
+                        title: 'Atenção',
+                        message: 'Erro ao realizar Post',
+                        timeout: 2000,
+                        onClosing: function() {
+                            location.reload();
+                        }
+                    });          
+                }
+            })
         }else{
           iziToast.warning({
             title: 'Atenção',
-            message: 'As inputs titulo, descrição, endereço e data são obrigatórias',
+            message: 'A data não pode ser anterior a data atual',
             timeout: 2000,
           });
         }
+      }else{
+        iziToast.warning({
+          title: 'Atenção',
+          message: 'As inputs titulo, descrição, endereço e data são obrigatórias',
+          timeout: 2000,
+        });
+      }
     })
 
     function verificaTamanhoVideo(video) {
       var extensoes = ["zip", "rar", "pdf", "jpeg", "jpg", "png", "tif", "gif", "mp4", "avi", "mkv", "rmvb"];
       var fnome = video.type.split("/")[1];
       if(extensoes.indexOf(fnome) >= 0){
-          if(!(video.size > 3072000)){
+          if(!(video.size > 2200000)){
               return true;
           } else {
               return false;

@@ -74,7 +74,7 @@
           <input type="text" class="form-control input-obrigatoria" id="endereco_evento" aria-describedby="endereço" placeholder="Endereço" required>
         </div>
         <div class="form-group">
-          <input type="date" class="form-control input-obrigatoria" id="data_evento" required>
+          <input type="date" class="form-control input-obrigatoria" data-date-format="DD MMMM YYYY" id="data_evento" required>
         </div>
         <div class="form-group">
           <div class="row">
