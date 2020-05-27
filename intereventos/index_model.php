@@ -46,8 +46,11 @@ function inserePostagem( $PDO, $dados, $midia){
     }
 }
 
-function pegaPostagem($PDO){
-    $sql = "SELECT *,TO_BASE64(midia) as midia, tipo_midia FROM intereventos.feed_post left join midia on id_post_midia = id_post";
+function pegaPostagem($PDO, $dados){
+    $limit = $dados['limit'];
+    $offset = $dados['offset'];
+    $sql = "SELECT *,TO_BASE64(midia) as midia, tipo_midia FROM intereventos.feed_post left join intereventos.midia on id_post_midia = id_post 
+    where intereventos.feed_post.data_post > now() limit $offset, $limit;";
     $stmt = $PDO->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -63,7 +66,7 @@ switch ($_POST['acao']) {
     case 'insert':
         $resultado = inserePostagem($PDO, $_POST, $_FILES['file']);
     case 'select':
-        $resultado = pegaPostagem($PDO);
+        $resultado = pegaPostagem($PDO, $_POST);
     break;
 }
 

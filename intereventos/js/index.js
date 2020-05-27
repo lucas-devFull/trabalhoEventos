@@ -1,11 +1,13 @@
 var imagem = []
 var tipoMidia = []
+var offset = 0;
+var limit = 5;
 $(document).ready(function() {
   $("#data_evento").attr("min", new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear())
       $.ajax({
         method: "POST",
         url: "index_model.php",
-        data:{acao:"select"},
+        data:{acao:"select", limit:limit, offset:offset},
         dataType: "json",
       }).done( (data) => {
           if(data.status) {      

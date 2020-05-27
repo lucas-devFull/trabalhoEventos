@@ -46,12 +46,12 @@ require_once 'check.php';
         <p class="lead text-light">Bem Vindo à Comunidade <?php echo $_SESSION['username']; ?></p>
       </div>
 
-      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="postagem_comentarios" data-id-post onclick="box_mensagem(this)">
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="postagem_comentarios" style="display:flex;justify-content:center;">
         <div class="card mb-3 card-avisos">
           <div class="data_evento" id="data_evento"> 
             
           </div>
-          <img class="card-group"  src id='img' alt="Card image cap">
+          <div id="img"></div>
           <div class="card-body card_texto" id="card_texto_post">
           </div>
         </div>
@@ -294,15 +294,28 @@ require_once 'check.php';
             `)
           }
         }
-
-        $("#img").attr("src", "")
+        $("#img").html("")
         $("#data_evento").html("")
         $(`#card_texto_post`).html("")
         for(const post of resp.post) {
           console.log(post);
-          var dataFormatada = transformaData(post.data_post)
+          var tagMidia = ""
+          if (post.tipo_midia == "video") {
+            if (post.midia != null && post.midia != "" && post.midia != undefined) {
+              tagMidia =  `<video style='width:100%;height:100%;' class="anexos" controls="" src="data:video/mp4;base64,${post.midia}" alt="Card image cap">`
+              $(".card-avisos").css("width", "65em");
+            }else{
+              tagMidia = `<img style="width:100%;" src="imagem/imagem_default.gif" alt="Card image cap">`    
+            }
+            
+          }else{
+            tagMidia =  `<img style="width:100%;" src="${(post.midia != null && post.midia != "" && post.midia != undefined)? "data:image/png;base64,"+post.midia : "imagem/imagem_default.gif"}" alt="Card image cap">`
+            
+          }
+          
+          $("#img").append(tagMidia)
 
-          $("#img").attr("src",(post.midia != null && post.midia != "" && post.midia != undefined)? "data:image/png;base64,"+post.midia : "imagem/imagem_default.gif")
+          var dataFormatada = transformaData(post.data_post)
           $("#data_evento").append(`
             <div class="mt-2"> ${dataFormatada.mes} </div>
             <div> ${dataFormatada.dia} </div>`
