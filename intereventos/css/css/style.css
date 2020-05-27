@@ -227,3 +227,9 @@ html{
     display: flex;
     flex-direction: column;
 }
+
+.texto_forum{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}

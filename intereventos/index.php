@@ -23,7 +23,7 @@
             <p class="card-text text-center endereco-page" style="font-size:95%;">
               <small class="text-muted"><span>Endereco: </span> Rua: josé rodrigo da silva n:45, jardim aeroport</small>
             </p>
-            <p class="text-right">
+            <p class="text-right texto_forum">
               <small><a href="forum.php"> Pergunte ao Forúm -></a></small>
             </p>
           </div>
@@ -51,37 +51,37 @@
     <div style="padding:5%"> 
       <div>
         <div class="form-group">
-          <input type="text" class="form-control" id="titulo_evento" aria-describedby="Titulo" placeholder="Titulo">
+          <input type="text" class="form-control input-obrigatoria" id="titulo_evento" aria-describedby="Titulo" placeholder="Titulo" required>
         </div>
         <div class="form-group">
           <div style="display: flex;justify-content: center;">
             <span class="file_eventos" style="right: 5em;"><i class="fas fa-camera"></i></span>
-            <input type="file" class="arquivos_evento" accept="audio/*,video/*,image/*" data-anexo="imagem" style="right: 5em;" multiple="true">
+            <input type="file" class="arquivos_evento" accept="audio/*,video/*,image/*" data-anexo="imagem" style="right: 5em;" >
             <span class="file_eventos" style="right: 2em;"><i class="fas fa-video"></i></span>
-            <input type="file" class="arquivos_evento" accept="video/mp4,video/x-m4v,video/*" data-anexo="video" style="right: 2em;" multiple="true">
+            <input type="file" class="arquivos_evento" accept="video/mp4,video/x-m4v,video/*" data-anexo="video" style="right: 2em;" >
           </div>
           <div class="card" id="informacao_evento" style="width: 100%;">
             <div class="anexo_modal">    
             </div>
             <div class="card-body">
               <p class="card-text">
-                <textarea type="text" class="form-control textAreao-modal" id='textoPrincipal' rols='6' placeholder="Texto principal"></textarea>
+                <textarea type="text" class="form-control textAreao-modal input-obrigatoria" id='textoPrincipal' rols='6' placeholder="Texto principal" required></textarea>
               </p>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="endereco_evento" aria-describedby="endereço" placeholder="Endereço">
+          <input type="text" class="form-control input-obrigatoria" id="endereco_evento" aria-describedby="endereço" placeholder="Endereço" required>
         </div>
         <div class="form-group">
-          <input type="date" class="form-control" id="data_evento">
+          <input type="date" class="form-control input-obrigatoria" id="data_evento" required>
         </div>
         <div class="form-group">
           <div class="row">
-              <div class="col-md-3"><input type="text" class="form-control" id="link_fb" placeholder=' link facebook'> </div>
-              <div class="col-md-3"><input type="text" class="form-control" id="link_instagram" placeholder=' link instagram'> </div>
-              <div class="col-md-3"><input type="text" class="form-control" id="link_twitter" placeholder=' link twitter'> </div>
-              <div class="col-md-3"><input type="text" class="form-control" id="link_wpp" placeholder=' link whatsapp'> </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_fb" placeholder=' link facebook' > </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_instagram" placeholder=' link instagram' > </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_twitter" placeholder=' link twitter' > </div>
+              <div class="col-md-3"><input type="text" class="form-control" id="link_wpp" placeholder=' link whatsapp' > </div>
           </div>
         </div>
         <div style="text-align:end;">

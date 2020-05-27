@@ -13,17 +13,8 @@ function inserePostagem( $PDO, $dados, $midia){
         $link_insta = $dados['link_insta'];
         $link_tt = $dados['link_tt'];
         $link_wpp = $dados['link_wpp'];
-        // var_dump($midia['tmp_name']);
-
+        $tipoMidia = $dados['tipoMidia'];
         $imgData = addslashes(file_get_contents($midia['tmp_name']));
-        // $imageProperties = getimageSize($midia['tmp_name']);
-        
-        // var_dump($imgData);
-        // var_dump($imageProperties);
-        // exit();
-        // return;
-        // $sql = "INSERT INTO output_images(imageType ,imageData)
-	// VALUES('{$imageProperties['mime']}', '{$imgData}')";
 
         $sql = "INSERT INTO feed_post (titulo_post,descricao_post,endereco_post,data_post,link_fb,link_instagram,link_twitter,link_wpp) VALUES ('$titulo','$descricao','$endereco','$data','$link_fb','$link_insta','$link_tt','$link_wpp')";
         $stmt = $PDO->prepare($sql);
@@ -38,10 +29,11 @@ function inserePostagem( $PDO, $dados, $midia){
         $result = $stmt->execute();
         $id_post = (int)$PDO->lastInsertId();
 
-        $sql = "INSERT INTO midia (midia, id_post_midia) VALUES ('$imgData','$id_post')";
+        $sql = "INSERT INTO midia (midia, id_post_midia, tipo_midia) VALUES ('$imgData','$id_post','$tipoMidia')";
         $request = $PDO->prepare($sql);
         $request->bindParam('midia', $imgData);
         $request->bindParam('id_post_midia', $id_post);
+        $request->bindParam('tipo_midia', $tipoMidia);
         $imagem = $request->execute();
 
         if ($result && $imagem) {
@@ -55,7 +47,7 @@ function inserePostagem( $PDO, $dados, $midia){
 }
 
 function pegaPostagem($PDO){
-    $sql = "SELECT *,TO_BASE64(midia) as midia FROM intereventos.feed_post left join midia on id_post_midia = id_post";
+    $sql = "SELECT *,TO_BASE64(midia) as midia, tipo_midia FROM intereventos.feed_post left join midia on id_post_midia = id_post";
     $stmt = $PDO->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -1,4 +1,5 @@
 var imagem = []
+var tipoMidia = []
 $(document).ready(function() {
     $.ajax({
         method: "POST",
@@ -9,6 +10,19 @@ $(document).ready(function() {
           if(data.status) {      
             for (const i in data.dados) {
                 var dataFormatada = transformaData(data.dados[i].data_post)
+                var tagMidia = ""
+                if (data.dados[i].tipo_midia == "video") {
+                  if (data.dados[i].midia != null && data.dados[i].midia != "" && data.dados[i].midia != undefined) {
+                    tagMidia =  `<video style='width:inherit;height:inherit;' class="anexos" controls="" src="data:video/mp4;base64,${data.dados[i].midia}" alt="Card image cap">`  
+                  }else{
+                    tagMidia = `<img style="width:100%;" src="imagem/imagem_default.gif" alt="Card image cap">`    
+                  }
+                  
+                }else{
+                  tagMidia =  `<img style="width:100%;" src="${(data.dados[i].midia != null && data.dados[i].midia != "" && data.dados[i].midia != undefined)? "data:image/png;base64,"+data.dados[i].midia : "imagem/imagem_default.gif"}" alt="Card image cap">`
+                  
+                }
+
                 $('#feed_noticias').prepend(`
                     <div class="col-9">
                       <div class="w-100">
@@ -18,7 +32,7 @@ $(document).ready(function() {
                             <div class="mt-2"> ${dataFormatada.mes} </div>
                             <div> ${dataFormatada.dia} </div>
                           </div>
-                            <img style="width:100%;" src="${(data.dados[i].midia != null && data.dados[i].midia != "" && data.dados[i].midia != undefined)? "data:image/png;base64,"+data.dados[i].midia : "imagem/imagem_default.gif"}" alt="Card image cap">
+                            `+ tagMidia + `
                           </div>
                           <div class="card-body card_texto  col-md-6">
                             <h5 class="card-title text-center" style="color:white;font-size: 200%;">${data.dados[i].titulo_post}</h5>
@@ -26,7 +40,7 @@ $(document).ready(function() {
                             <p class="card-text text-center endereco-page" style="font-size:95%;">
                               <small class="text-muted"><span>Endereco: </span> ${data.dados[i].endereco_post} </small>
                             </p>
-                            <p class="text-right">
+                            <p class="text-right texto_forum">
                               <small><a href="forum.php?id=${data.dados[i].id_post}"> Pergunte ao Forúm -></a></small>
                             </p>
                           </div>
@@ -77,10 +91,20 @@ $(document).ready(function() {
             var r = new FileReader();
             r.onload = function(e){
                 if (tipo == "video") {
-                    $(".arquivos_evento[data-anexo='imagem']").val("")
+                  imagem = $(".arquivos_evento[data-anexo='video']")[0].files[0]
+                  $(".arquivos_evento[data-anexo='imagem']").val("")
+                  if (verificaTamanhoVideo(imagem) == true){
                     $(".anexo_modal").html('<video id="previewMp4" class="anexos" controls autoplay></video>')
                     $("#previewMp4").show();
-                    $("#previewMp4").attr("src", e.target.result);
+                    $("#previewMp4").attr("src", e.target.result);    
+                  }else{
+                    iziToast.warning({
+                      title: 'Atenção',
+                      message: 'Ficheiro muito grande / extensão incorreta',
+                      timeout: 2000,
+                    });    
+                    $(".arquivos_evento[data-anexo='video']").val("")
+                  }
                 }else{
                     imagem = $(".arquivos_evento[data-anexo='imagem']")[0].files[0]
                     $(".arquivos_evento[data-anexo='video']").val("")
@@ -88,6 +112,7 @@ $(document).ready(function() {
                     $("#previewImg").show();
                     $("#previewImg").attr("src", e.target.result);
                 }
+                tipoMidia = tipo 
             }
             r.readAsDataURL(input.files[0]);
         }
@@ -95,51 +120,80 @@ $(document).ready(function() {
     
 
     $("#novo_post").on('click', function() {
-        console.log(imagem);
-        var dadosForm = new FormData();
-        dadosForm.append("file",imagem)
-        dadosForm.append("acao", "insert")
-        dadosForm.append('titulo', $("#titulo_evento").val())
-        dadosForm.append('descricao', $("#textoPrincipal").val())
-        dadosForm.append('endereco', $("#endereco_evento").val())
-        dadosForm.append('data', $("#data_evento").val())
-        dadosForm.append('link_fb', $("#link_fb").val())
-        dadosForm.append('link_insta', $("#link_instagram").val())
-        dadosForm.append('link_tt', $("#link_twitter").val())
-        dadosForm.append('link_wpp', $("#link_wpp").val())
-        $.ajax({
-            method: "POST",
-            url: "index_model.php",
-            dataType: 'script',
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: dadosForm,
-            type: 'post',
-          }).done( (data) => {
-            if (JSON.parse(data).status == true) {
-                $("input").val("")
-                iziToast.success({
-                    title: 'OK',
-					message: 'Postagem Cadastrada com Sucesso !!',
-                    timeout: 2000,
-                    onClosing: function() {
-                        location.reload();
-                    }
-                });
-            }else{
-                iziToast.warning({
-                    title: 'Atenção',
-                    message: 'Erro ao realizar Post',
-                    timeout: 2000,
-                    onClosing: function() {
-                        location.reload();
-                    }
-                });          
-            }
-        })
-            // console.log(data);
+      var valid = false; 
+      $(".input-obrigatoria").each(function(index){
+        if ($(this).val() == "" || $(this).val() == undefined || $(this).val() == null) {
+          valid = true;
+        }
+      })
+      console.log(valid);
+      
+        if(valid == false ){
+          var dadosForm = new FormData();
+          dadosForm.append("file",imagem)
+          dadosForm.append("tipoMidia", tipoMidia)
+          dadosForm.append("acao", "insert")
+          dadosForm.append('titulo', $("#titulo_evento").val())
+          dadosForm.append('descricao', $("#textoPrincipal").val())
+          dadosForm.append('endereco', $("#endereco_evento").val())
+          dadosForm.append('data', $("#data_evento").val())
+          dadosForm.append('link_fb', $("#link_fb").val())
+          dadosForm.append('link_insta', $("#link_instagram").val())
+          dadosForm.append('link_tt', $("#link_twitter").val())
+          dadosForm.append('link_wpp', $("#link_wpp").val())
+          $.ajax({
+              method: "POST",
+              url: "index_model.php",
+              dataType: 'script',
+              cache: false,
+              contentType: false,
+              processData: false,
+              data: dadosForm,
+              type: 'post',
+            }).done( (data) => {
+              if (JSON.parse(data).status == true) {
+                  $("input").val("")
+                  iziToast.success({
+                      title: 'OK',
+				  	          message: 'Postagem Cadastrada com Sucesso !!',
+                      timeout: 2000,
+                      onClosing: function() {
+                          location.reload();
+                      }
+                  });
+              }else{
+                  iziToast.warning({
+                      title: 'Atenção',
+                      message: 'Erro ao realizar Post',
+                      timeout: 2000,
+                      onClosing: function() {
+                          location.reload();
+                      }
+                  });          
+              }
+          })
+        }else{
+          iziToast.warning({
+            title: 'Atenção',
+            message: 'As inputs titulo, descrição, endereço e data são obrigatórias',
+            timeout: 2000,
+          });
+        }
     })
+
+    function verificaTamanhoVideo(video) {
+      var extensoes = ["zip", "rar", "pdf", "jpeg", "jpg", "png", "tif", "gif", "mp4", "avi", "mkv", "rmvb"];
+      var fnome = video.type.split("/")[1];
+      if(extensoes.indexOf(fnome) >= 0){
+          if(!(video.size > 3072000)){
+              return true;
+          } else {
+              return false;
+          }
+      } else {
+          return false;
+      }
+    }
 
     function transformaData(stringData) {
         var data = stringData.split("-")
