@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `tipo_balada`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_balada` (
-  `id_tipo` int(11) NOT NULL AUTO_INCREMENT,
+  `id_tipo` int(11) NOT NULL,
   `desc_tipo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `tipo_balada` (
 
 LOCK TABLES `tipo_balada` WRITE;
 /*!40000 ALTER TABLE `tipo_balada` DISABLE KEYS */;
-INSERT INTO `tipo_balada` VALUES (1,'SERTANEJO'),(2,'Eletrônica'),(3,'MPB'),(4,'Rock');
+INSERT INTO `tipo_balada` VALUES (1,'SERTANEJO'),(2,'ELETRÔNICA'),(3,'MPB'),(4,'ROCK');
 /*!40000 ALTER TABLE `tipo_balada` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19  8:10:41
+-- Dump completed on 2020-05-28  0:01:23

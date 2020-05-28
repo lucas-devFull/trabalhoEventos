@@ -29,9 +29,8 @@ CREATE TABLE `mensagens` (
   `id_post` int(15) NOT NULL,
   `id_pergunta` int(15) DEFAULT NULL,
   `data_postagem` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY ('id_post') REFERENCES 'feed_noticias'('id_post')
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +39,7 @@ CREATE TABLE `mensagens` (
 
 LOCK TABLES `mensagens` WRITE;
 /*!40000 ALTER TABLE `mensagens` DISABLE KEYS */;
-INSERT INTO `mensagens` VALUES (1,'Guilkherme esta testando as nasdasd','maria',1,0,'2020-04-11 21:00:27'),(2,'Eu nao acredito que funcionou uhuuuuuuu','maria',1,0,'2020-04-11 21:04:00'),(3,'Queria que todos fossem felizes','maria',1,0,'2020-04-11 21:10:23'),(4,'Que fetsa animal GENTEEE!!!','maria',1,0,'2020-04-11 21:11:29'),(5,'WOWWWWWWWWWWW','maria',1,0,'2020-04-11 21:36:52'),(6,'funcionou sim gui vc e foda','Guilherme',1,2,'2020-04-11 21:40:20'),(7,'ESTA FUNCIONANDO MAIS FALTA COISA AINDA, AGUARDE!!','Lucas',1,6,'2020-04-11 21:48:23'),(8,'gracas a deus essa balada vai ser excluida','maria',1,0,'2020-04-11 21:58:40'),(9,'testando a respostad a resposta','maria  ',1,6,'2020-04-11 23:23:07'),(10,'asdasdsa','maria  ',1,0,'2020-04-11 23:25:23'),(11,'deu certo a resposta ?','maria  ',1,7,'2020-04-11 23:25:55'),(12,'PARECE QUE SIM, DEU CERTO','maria  ',1,7,'2020-04-11 23:26:15'),(13,'dgdsgsdg','maria  ',1,0,'2020-04-11 23:37:09'),(14,'salve maria eh noix','maria  ',1,0,'2020-04-11 23:44:53'),(15,'aaaaaaaaaaa','maria  ',1,1,'2020-04-11 23:48:58'),(16,'asdasdasdasd','maria  ',1,6,'2020-04-11 23:49:03'),(17,'madremia','maria  ',1,12,'2020-04-11 23:49:14'),(18,'teste','lucas  ',1,15,'2020-05-19 23:14:23'),(19,'teste','lucas  ',1,15,'2020-05-19 23:23:14'),(20,'ke','lucas  ',1,18,'2020-05-19 23:23:30'),(21,'texto','lucas  ',1,1,'2020-05-19 23:32:50'),(22,'seu guilherme ','lucas  ',1,1,'2020-05-19 23:35:09'),(23,'seu guilherme ','lucas  ',1,13,'2020-05-19 23:35:25');
+INSERT INTO `mensagens` VALUES (1,'Guilkherme esta testando as nasdasd','maria',1,0,'2020-04-11 21:00:27'),(2,'Eu nao acredito que funcionou uhuuuuuuu','maria',1,0,'2020-04-11 21:04:00'),(3,'Queria que todos fossem felizes','maria',1,0,'2020-04-11 21:10:23'),(4,'Que fetsa animal GENTEEE!!!','maria',1,0,'2020-04-11 21:11:29'),(5,'WOWWWWWWWWWWW','maria',1,0,'2020-04-11 21:36:52'),(6,'funcionou sim gui vc e foda','Guilherme',1,2,'2020-04-11 21:40:20'),(7,'ESTA FUNCIONANDO MAIS FALTA COISA AINDA, AGUARDE!!','Lucas',1,6,'2020-04-11 21:48:23'),(8,'gracas a deus essa balada vai ser excluida','maria',1,0,'2020-04-11 21:58:40'),(9,'testando a respostad a resposta','maria  ',1,6,'2020-04-11 23:23:07'),(10,'asdasdsa','maria  ',1,0,'2020-04-11 23:25:23'),(11,'deu certo a resposta ?','maria  ',1,7,'2020-04-11 23:25:55'),(12,'PARECE QUE SIM, DEU CERTO','maria  ',1,7,'2020-04-11 23:26:15'),(13,'dgdsgsdg','maria  ',1,0,'2020-04-11 23:37:09'),(14,'salve maria eh noix','maria  ',1,0,'2020-04-11 23:44:53'),(15,'aaaaaaaaaaa','maria  ',1,1,'2020-04-11 23:48:58'),(16,'asdasdasdasd','maria  ',1,6,'2020-04-11 23:49:03'),(17,'madremia','maria  ',1,12,'2020-04-11 23:49:14'),(18,'teste','lucas  ',1,15,'2020-05-19 23:14:23'),(19,'teste','lucas  ',1,15,'2020-05-19 23:23:14'),(20,'ke','lucas  ',1,18,'2020-05-19 23:23:30'),(21,'texto','lucas  ',1,1,'2020-05-19 23:32:50'),(22,'seu guilherme ','lucas  ',1,1,'2020-05-19 23:35:09'),(23,'seu guilherme ','lucas  ',1,13,'2020-05-19 23:35:25'),(24,'teste','lucas',1,0,'2020-05-20 20:44:35'),(25,'pandemia','lucas  ',1,17,'2020-05-20 20:47:23'),(26,'hehe','lucas  ',1,1,'2020-05-20 21:55:22'),(27,'teste','lucas',1,0,'2020-05-20 23:19:28'),(28,'teste\n','lucas',1,0,'2020-05-20 23:22:24'),(29,'ke','lucas',1,0,'2020-05-20 23:22:33'),(30,'teste','lucas',1,0,'2020-05-20 23:24:30'),(31,'testeeeee','lucas',1,0,'2020-05-20 23:25:55'),(32,'gayyyy','lucas  ',1,25,'2020-05-20 23:28:19'),(33,'kkkk','lucas',1,0,'2020-05-20 23:39:58'),(34,'nehhhhh','lucas  ',1,4,'2020-05-22 20:09:36'),(35,'testte','lucas',15,0,'2020-05-25 22:52:08');
 /*!40000 ALTER TABLE `mensagens` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19 23:44:08
+-- Dump completed on 2020-05-28  0:01:22

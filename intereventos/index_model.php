@@ -49,7 +49,7 @@ function inserePostagem( $PDO, $dados, $midia){
 function pegaPostagem($PDO, $dados){
     $offset = $dados['offset'];
     $sql = "SELECT *,TO_BASE64(midia) as midia, tipo_midia FROM intereventos.feed_post 
-    left join intereventos.midia on id_post_midia = id_post 
+    left join intereventos.midia on id_post_midia = id_post where data_post > now()
     order by id_post DESC limit 5 offset $offset ";
     
     $stmt = $PDO->prepare($sql);

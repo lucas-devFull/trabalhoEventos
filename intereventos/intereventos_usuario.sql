@@ -29,7 +29,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(15) DEFAULT NULL,
   `admin` int(11) DEFAULT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'maria','maria@gmail.com','123',0),(2,'Claudia','claudia@gmail.com','123',0),(3,'Daniel','daniel@gmail.com','123',0),(4,'teste','aa@aa','aa',0),(5,'Lucas Consa','lucas@gmail.com','111',1);
+INSERT INTO `usuario` VALUES (1,'maria','maria@gmail.com','123',0),(2,'Claudia','claudia@gmail.com','123',0),(3,'Daniel','daniel@gmail.com','123',0),(4,'Lucas Conceição de Souza','lucaslssoiza2015@gmail.com','',0),(5,'lucas','lucas@gmail.com','123',1),(6,'teste','teste@gmail.com','lucas',0),(7,'teste','teste@teste','123',0),(8,'','','',0),(9,'teste','teste@gmail.com','123',0),(10,'teste','teste@gmail,ci','123',0),(11,'','','',0),(12,'testw','teste@gmail.com','123',0),(13,'teste','teste','123',0),(14,'teste','teste','123',0);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19  8:10:41
+-- Dump completed on 2020-05-28  0:01:23

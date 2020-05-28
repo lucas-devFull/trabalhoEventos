@@ -24,12 +24,12 @@ DROP TABLE IF EXISTS `balada`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `balada` (
   `id_balada` int(11) NOT NULL AUTO_INCREMENT,
-  `desc_balada` varchar(50) DEFAULT NULL,
-  `id_tipo_balada` int(11) NOT NULL,
+  `desc_balada` varchar(60) DEFAULT NULL,
+  `id_tipo_balada` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_balada`),
   KEY `id_tipo_balada` (`id_tipo_balada`),
   CONSTRAINT `balada_ibfk_1` FOREIGN KEY (`id_tipo_balada`) REFERENCES `tipo_balada` (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `balada` (
 
 LOCK TABLES `balada` WRITE;
 /*!40000 ALTER TABLE `balada` DISABLE KEYS */;
-INSERT INTO `balada` VALUES (1,'BALADINHA SERTENEJA',1),(2,'Balada SertaFunk',1),(3,'teste',2),(4,'teste',2),(5,'Teste',2);
+INSERT INTO `balada` VALUES (1,'teste',3),(2,'Baladinha SErtaFunk',1);
 /*!40000 ALTER TABLE `balada` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-19  8:10:41
+-- Dump completed on 2020-05-28  0:01:23
