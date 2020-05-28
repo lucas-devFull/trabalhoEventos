@@ -117,7 +117,7 @@ $(document).ready(function() {
                 data: dadosForm,
                 type: 'post',
               }).done( (data) => {
-                if (JSON.parse(data).status == true) {
+                if (JSON.parse(JSON.parse(data)).status == true) {
                     $("input").val("")
                     iziToast.success({
                         title: 'OK',

@@ -6,7 +6,7 @@
     <div id="newPost" style="margin-top:2%;"> <i class="newPost far fa-plus-square"></i> </div>
   <?php } ?>
 
-  <div class="row mb-5" id="feed_noticias" style="display:flex; justify-content:center;margin-top:2%;overflow: auto;">
+  <div class="row mb-5" id="feed_noticias" style="display:flex; justify-content:center;margin-top:2%;overflow: auto; height:inherit;">
   </div>
 </div>
 <div id="modal-post" aria-hidden="true" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px; display: none; height: 448px;">
